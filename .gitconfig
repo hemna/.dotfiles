@@ -1,0 +1,85 @@
+[user]
+    name = Walter A. Boring IV
+    email = waboring@hemna.com
+
+[core]
+    editor = vim -f
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile=/home/waboring/.gitignore
+[alias]
+	st = status -s
+	co = checkout
+	ci = commit -a
+	br = branch
+	praise = blame
+	lg = log -p
+	lol = log --graph --decorate  --abbrev-commit
+	lola = log --graph --decorate --abbrev-commit --all
+	ls = ls-files
+
+	#show files ignored by git
+	ign = ls-files -o -i --exclude-standard
+	
+[apply]
+	whitespace = strip
+
+[format]
+    # Make 'git log' default to this format
+    pretty = color
+
+[pretty]
+    color = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset
+
+[color]
+	ui = true
+	wtf = true
+
+[diff]
+	color = auto
+	rename = copy
+
+[status]
+	color = auto
+
+[pager]
+	color = true
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[color "diff"]
+	whitespace = red reverse
+
+	
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 470
+	file-view-vpane-position = 1078
+	main-window-view = HistoryView
+[svn]
+	rmdir = true
+
+[gitreview]
+	username = walter-boring
+
+[web]
+    browser = chromium-browser
+
+[github]
+	user = hemna
+	token = 28ab44fb6c8b532cce53b46d3acd8951703fe7a4
+	email = waboring@hemna.com
