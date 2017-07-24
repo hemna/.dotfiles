@@ -159,6 +159,10 @@ alias homedev="ssh -X hemna.mynetgear.com"
 alias dev="ssh -X 192.168.1.44"
 alias wx="wego -l '38.837333,-121.0187007'"
 
+#SUSE
+alias hlm201="ssh stack@10.84.88.1"
+alias hlm202="ssh stack@10.84.89.1"
+
 # run git pull origin master in every subdirectory from .
 alias gp="find . -name .git -type d -execdir git pull origin master -v ';'"
 
@@ -191,6 +195,8 @@ HOSTNAME=`hostname`
 WORKBOX="Hemna-Virt"
 MAC_DESKTOP="Walters-Mac-Pro.local"
 MAC_LAPTOP="Walters-MacBook-Pro.local"
+echo "Hello $HOSTNAME"
+
 if [ "$HOSTNAME" == "$WORKBOX" ]; then 
     # Go
     export GOROOT="/usr/local/go"
@@ -214,7 +220,8 @@ if [ "$HOSTNAME" == "$WORKBOX" ]; then
     #curl http://wttr.in/95664
     #wego
 elif [ "$HOSTNAME" == "$MAC_DESKTOP" ] || [ "$HOSTNAME" == "$MAC_LAPTOP" ]; then
-    echo "Hello $HOSTNAME"
+    export GOROOT="/usr/local/go"
+    export GOPATH=$HOME/devel/go/gocode
 
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
@@ -223,4 +230,9 @@ elif [ "$HOSTNAME" == "$MAC_DESKTOP" ] || [ "$HOSTNAME" == "$MAC_LAPTOP" ]; then
     alias v="mvim -v"
     export GOPATH=$HOME/go
     export PATH=$PATH:$GOPATH/bin
+    #export ANDROIDSDK="/Applications/Android Studio.app/Contents/bin"
+    export ANDROIDSDK=$HOME/devel/android/android-sdk
+    export ANDROIDNDK=$HOME/devel/android/android-ndk-r14b/bin
+    export ANDROIDNDKVER="r14b"
+
 fi

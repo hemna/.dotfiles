@@ -71,3 +71,6 @@ let g:rbpt_colorpairs = [
     \ ]
 
 au VimEnter * RainbowParenthesesToggle
+
+
+let g:pymode_rope_regenerate_on_write = 0
