@@ -4,6 +4,10 @@ ABSPATH="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
 SRC=`dirname $ABSPATH`
 
 function link {
+ if [ -e "$DST/$1" ]
+ then
+     rm $DST/$1
+ fi
  ln -s $SRC/$1 $DST/$1
 }
 
