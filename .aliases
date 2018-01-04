@@ -1,0 +1,39 @@
+# This file contains common aliases for both zsh and bashrc
+
+# Functions
+alias zshrc="vim ~/.zshrc && source ~/.zshrc"
+alias psg="ps aux | grep -v grep |grep -i -e VSZ -e"
+alias vssh="vagrant ssh"
+# run git pull origin master in every subdirectory from .
+alias gp="find . -name .git -type d -execdir git pull origin master -v ';'"
+
+alias ll='ls -lhFA'
+#alias mvn='mvn -P \!create-iso,\!create-installation,\!local-server'
+alias mvn='mvn -P \!create-iso,\!create-installation'
+alias bashrc="vim ~/.bashrc && source ~/.bashrc"
+alias vssh="vagrant ssh"
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias moer="more"
+alias install="sudo apt-get install"
+alias archey="pyarchey"
+alias xdg="xdg-open"
+alias google="chromium-browser http://www.gogle.com"
+alias wx="wego -l '38.837333,-121.0187007'"
+
+cdl() { cd "$@" && ls -lhFA; }
+
+# HOME
+alias laptop="ssh 192.168.1.113"
+alias homedev="ssh -X hemna.mynetgear.com"
+alias dev="ssh -X 192.168.1.44"
+alias devs="ssh -X 192.168.1.113"
+
+# SUSE
+alias hlm007="ssh stack@10.84.81.17"
+alias hlm201="ssh stack@10.84.88.1"
+alias hlm202="ssh stack@10.84.89.1"
+alias hlm004="ssh stack@10.84.79.1"
+alias devbm="ssh -X waboring@10.84.128.15"

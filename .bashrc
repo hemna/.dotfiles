@@ -139,34 +139,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias ls='ls -GFh'
 fi
 
-alias ll='ls -lhFA'
-#alias mvn='mvn -P \!create-iso,\!create-installation,\!local-server'
-alias mvn='mvn -P \!create-iso,\!create-installation'
-alias bashrc="vim ~/.bashrc && source ~/.bashrc"
-alias vssh="vagrant ssh"
+# Pull in the common aliases
+source ~/.aliases
 
-alias cd..="cd .."
-alias ..="cd .."
-alias ...="cd ../.."
-
-alias moer="more"
-alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
-alias install="sudo apt-get install"
-alias archey="pyarchey"
-alias xdg="xdg-open"
-alias google="chromium-browser http://www.gogle.com"
-alias homedev="ssh -X hemna.mynetgear.com"
-alias dev="ssh -X 192.168.1.44"
-alias wx="wego -l '38.837333,-121.0187007'"
-
-#SUSE
-alias hlm201="ssh stack@10.84.88.1"
-alias hlm202="ssh stack@10.84.89.1"
-
-# run git pull origin master in every subdirectory from .
-alias gp="find . -name .git -type d -execdir git pull origin master -v ';'"
-
-cdl() { cd "$@" && ls -lhFA; }
 
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 

@@ -7,8 +7,11 @@ function link {
  ln -s $SRC/$1 $DST/$1
 }
 
-link .vimrc
+link .aliases
 link .bashrc
-link .screenrc
+link .zshrc
+
 link .gitconfig
+link .screenrc
 link .vim
+link .vimrc
