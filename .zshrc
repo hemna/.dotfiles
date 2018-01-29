@@ -9,7 +9,7 @@ export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 if [[ `uname` == 'Linux' ]]
 then
-  export ZSH=/home/waboring/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 fi
 
 if [[ `uname` == 'Darwin' ]]
