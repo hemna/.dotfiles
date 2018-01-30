@@ -32,6 +32,7 @@ alias dev="ssh -X 192.168.1.44"
 alias devs="ssh -X 192.168.1.113"
 
 # SUSE
+alias hlm002="ssh ardana@10.84.65.4"
 alias hlm007="ssh stack@10.84.81.17"
 alias hlm201="ssh stack@10.84.88.1"
 alias hlm202="ssh stack@10.84.89.1"
