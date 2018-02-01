@@ -19,3 +19,4 @@ link .gitconfig
 link .screenrc
 link .vim
 link .vimrc
+link .tmux.conf
