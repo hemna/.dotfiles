@@ -11,12 +11,12 @@ set foldmethod=indent
 set foldlevel=99
 set colorcolumn=80
 
-syntax on
-filetype on
-filetype plugin indent on
-silent! call pathogen#infect()
-silent! call pathogen#helptags()
+call pathogen#infect()
+call pathogen#helptags()
 
+syntax on
+filetype plugin indent on
+filetype on
 
 nnoremap <leader>v <Plug>TaskList
 map <leader>td <Plug>TaskList
