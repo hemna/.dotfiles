@@ -111,3 +111,8 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 #
 #
 source ~/.aliases
+
+# Disable correctall for cp
+alias cp='nocorrect cp '
+alias mv='nocorrect mv '
+alias mkdir='nocorrect mkdir '
