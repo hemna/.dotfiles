@@ -111,3 +111,6 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 #
 #
 source ~/.aliases
+
+# add anything in the ~/.bin to the path
+export PATH=$PATH:~/.bin

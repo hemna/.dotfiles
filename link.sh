@@ -20,3 +20,4 @@ link .screenrc
 link .vim
 link .vimrc
 link .tmux.conf
+link .bin

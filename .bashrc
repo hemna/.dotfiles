@@ -177,7 +177,7 @@ if [ "$HOSTNAME" == "$WORKBOX" ]; then
     export GOROOT="/usr/local/go"
     export GOPATH=$HOME/gocode
 
-    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/.bin
 
     alias avwx='chromium-browser --user-data-dir=~/.ass --allow-file-access-from-files --disable-web-security /home/waboring/workspace/AviationWeatherHD/index.html'
 
@@ -204,7 +204,7 @@ elif [ "$HOSTNAME" == "$MAC_DESKTOP" ] || [ "$HOSTNAME" == "$MAC_LAPTOP" ]; then
 
     alias v="mvim -v"
     export GOPATH=$HOME/go
-    export PATH=$PATH:$GOPATH/bin
+    export PATH=$PATH:$GOPATH/bin:~/.bin
     #export ANDROIDSDK="/Applications/Android Studio.app/Contents/bin"
     export ANDROIDSDK=$HOME/devel/android/android-sdk
     export ANDROIDNDK=$HOME/devel/android/android-ndk-r14b/bin
