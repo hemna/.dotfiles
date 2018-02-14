@@ -39,3 +39,5 @@ alias hlm202="ssh stack@10.84.89.1"
 alias hlm004="ssh stack@10.84.79.1"
 alias hlm006="ssh stack@10.84.81.1"
 alias devbm="ssh -X waboring@10.84.128.15"
+
+alias devceph="ssh l3@10.84.56.6"
