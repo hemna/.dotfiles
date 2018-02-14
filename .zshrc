@@ -114,3 +114,9 @@ source ~/.aliases
 
 # add anything in the ~/.bin to the path
 export PATH=$PATH:~/.bin
+
+
+# Disable correctall for cp
+alias cp='nocorrect cp '
+alias mv='nocorrect mv '
+alias mkdir='nocorrect mkdir '
