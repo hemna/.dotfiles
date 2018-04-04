@@ -42,7 +42,7 @@ set laststatus=2
 set t_Co=256
 
 let g:gitgutter_enabled=1
-let g:gitgutter_sign_column_always=1
+set signcolumn=yes
 set showcmd
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
