@@ -167,12 +167,11 @@ fi
 
 
 HOSTNAME=`hostname`
-WORKBOX="Hemna-Virt"
+HOMEDEV="Hemna-Virt"
 MAC_DESKTOP="Walters-Mac-Pro.local"
 MAC_LAPTOP="Walters-MacBook-Pro.local"
-echo "Hello $HOSTNAME"
 
-if [ "$HOSTNAME" == "$WORKBOX" ]; then 
+if [ "$HOSTNAME" == "$HOMEDEV" ]; then 
     # Go
     export GOROOT="/usr/local/go"
     export GOPATH=$HOME/gocode
