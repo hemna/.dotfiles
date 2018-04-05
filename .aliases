@@ -7,7 +7,7 @@ alias vssh="vagrant ssh"
 # run git pull origin master in every subdirectory from .
 alias gp="find . -name .git -type d -execdir git pull origin master -v ';'"
 
-alias ll='ls -lhFA'
+alias ll='ls -lhFA --color=auto'
 #alias mvn='mvn -P \!create-iso,\!create-installation,\!local-server'
 alias mvn='mvn -P \!create-iso,\!create-installation'
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
