@@ -113,8 +113,12 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 source ~/.aliases
 
 # add anything in the ~/.bin to the path
-export PATH=$PATH:~/.bin
+export PATH=$PATH:~/.bin:/sbin
 
+# Add any local settings that aren't in .dotfiles
+if [[ -s ~/.local.sh ]]; then
+    source ~/.local.sh
+fi
 
 # Disable correctall for cp
 alias cp='nocorrect cp '

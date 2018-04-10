@@ -7,7 +7,7 @@ alias vssh="vagrant ssh"
 # run git pull origin master in every subdirectory from .
 alias gp="find . -name .git -type d -execdir git pull origin master -v ';'"
 
-alias ll='ls -lhFA'
+alias ll='ls -lhFA --color=auto'
 #alias mvn='mvn -P \!create-iso,\!create-installation,\!local-server'
 alias mvn='mvn -P \!create-iso,\!create-installation'
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
@@ -32,12 +32,13 @@ alias dev="ssh -X 192.168.1.44"
 alias devs="ssh -X 192.168.1.113"
 
 # SUSE
-alias hlm002="ssh ardana@10.84.65.4"
+alias hlm002="ssh ardana@10.84.43.81"
 alias hlm007="ssh stack@10.84.81.17"
-alias hlm201="ssh stack@10.84.88.1"
+alias hlm201="ssh ardana@10.84.88.1"
 alias hlm202="ssh stack@10.84.89.1"
-alias hlm004="ssh stack@10.84.79.1"
+alias hlm004="ssh ardana@10.84.43.135"
 alias hlm006="ssh stack@10.84.81.1"
-alias devbm="ssh -X waboring@10.84.128.15"
+alias devbm="ssh -X waboring@10.84.128.7"
+alias devbm2="ssh -X waboring@10.84.128.24"
 
 alias devceph="ssh l3@10.84.56.6"
