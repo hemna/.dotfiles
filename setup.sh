@@ -3,8 +3,15 @@
 # make sure .vim submodules are installed
 cd .vim
 git submodule init
-git submodule update
-cd ..
+git submodule update --init --recursive
+
+# Need to build and install YouCompleteMe
+# need cmake and gcc-c++
+# sudo zypper in cmake gcc-c++ python-devel
+cd bundle/YouCompleteMe
+./install.py
+
+cd ../..
 
 # use this to setup the basic shell and pull what is needed
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
