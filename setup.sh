@@ -21,8 +21,13 @@ git submodule update --init --recursive
 #cd $oldpwd
 
 # use this to setup the basic shell and pull what is needed
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+if [ ! -d ~/.oh-my-zsh ]; then
+  git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+else
+    cd ~/.oh-my-zsh
+    git submodule update --init --recursive
+fi
 
 iszsh=`command -v zsh | wc -l`
 
