@@ -29,10 +29,9 @@ function is_installed() {
     echo "$is_installed"
 }
 
-
 function test_or_install_app() {
   is_it=$(is_installed $1)
-  if [ $is_it -eq 1 ]; then
+  if [ $is_it -eq 0 ]; then
     install_app $1
   else
     echo "$1 already installed"
@@ -82,7 +81,7 @@ if [ ! -d src ]; then
 fi
 
 # install zsh
-install_app zsh
+test_or_install_app zsh
 
 # install jo
 install_jo

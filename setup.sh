@@ -19,10 +19,10 @@ cd $oldpwd
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
-iszsh=`which zsh | wc -l`
+iszsh=`command -v zsh | wc -l`
 
 # only set to zsh if it exists
-if [ iszsh -eq 1]; then
+if [ iszsh -eq 1 ]; then
   chsh -s $(which zsh)
 fi
 
