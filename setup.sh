@@ -30,4 +30,5 @@ if [ $iszsh -eq 1 ]; then
   chsh -s $(which zsh)
 fi
 
+cd ~/.dotfiles
 ./link.sh
