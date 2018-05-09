@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-oldpwd=$PWD
+cd ~/.dotfiles
+./install_apps.sh
 
 # make sure .vim submodules are installed
-cd .vim
+cd ~/.dotfiles/.vim
 git submodule init
 git submodule update --init --recursive
 
@@ -18,8 +19,6 @@ git submodule update --init --recursive
 #./install.py
 
 #cd $oldpwd
-cd ~/.dotfiles
-./install_apps.sh
 
 # use this to setup the basic shell and pull what is needed
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
