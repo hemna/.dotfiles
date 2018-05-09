@@ -48,7 +48,7 @@ function install_jo_src() {
       echo "Building Jo from src"
   fi
   exit
-  cd src
+
   # install jo
   # need autoconf, automake, libtool
   test_or_install_app autoconf
