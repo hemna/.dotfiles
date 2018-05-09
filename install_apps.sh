@@ -24,10 +24,15 @@ function install_app() {
   cmd=`$cmd $1`
 }
 
-function test_or_install_app() {
+function is_installed() {
+    local is_installed=`command -v $1 | wc -l`
+    echo "$is_installed"
+}
 
-  is_installed=`which $1 | grep "not found" | wc -l`
-  if [ $is_installed -eq 1 ]; then
+
+function test_or_install_app() {
+  is_it=$(is_installed $1)
+  if [ $is_it -eq 1 ]; then
     install_app $1
   else
     echo "$1 already installed"
@@ -36,6 +41,14 @@ function test_or_install_app() {
 
 
 function install_jo_src() {
+  is_it=$(is_installed jo)
+  if [ $is_it -eq 1 ]; then
+      echo "jo already installed"
+      return
+  else
+      echo "Building Jo from src"
+  fi
+  exit
   cd src
   # install jo
   # need autoconf, automake, libtool
@@ -45,7 +58,6 @@ function install_jo_src() {
   if [ -d jo ]; then
     rm -rf jo
   fi
-  echo "Building Jo from src"
   echo "Find info about jo here: https://github.com/jpmens/jo"
   git clone https://github.com/jpmens/jo && cd jo
   autoreconf -i
@@ -68,6 +80,9 @@ function install_jo() {
 if [ ! -d src ]; then
   mkdir src
 fi
+
+# install zsh
+install_app zsh
 
 # install jo
 install_jo
