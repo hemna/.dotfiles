@@ -10,6 +10,7 @@ set modeline
 set foldmethod=indent
 set foldlevel=99
 set colorcolumn=80
+set number
 
 call pathogen#infect()
 call pathogen#helptags()

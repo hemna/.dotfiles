@@ -25,7 +25,18 @@ fi
 #
 # To install this theme
 # git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-ZSH_THEME="powerlevel9k/powerlevel9k"
+my_themes=(powerlevel9k/powerlevel9k xiong-chiamiov-plus gnzh ys \
+    takashiyoshida suvash superjarin \
+    strug steeef smt simonoff rkj rkj-repos \
+    rgm pygmalion mortalscumbag linuxonly \
+    )
+maybe=(jnrow jreese kennethreitz maran minimal muse nanotech norm negirhos)
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+# pick a random theme from the bitches I like.
+my_theme_len=$((${#my_themes[@]}-1))
+pick=`shuf -i 1-$my_theme_len -n 1`
+ZSH_THEME="${my_themes[$pick]}"
+#ZSH_THEME="xiong-chiamiov-plus"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -69,7 +80,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autopep8 docker git python screen sudo suse tig vagrant)
+plugins=(autopep8 battery docker git git-extras python screen sudo suse tig vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
