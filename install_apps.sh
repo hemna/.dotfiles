@@ -74,6 +74,14 @@ function install_jo() {
   esac
 }
 
+function install_xcip() {
+  # on the Mac, we can use brew
+  case $OS in
+      'linux') test_or_install xclip ;;
+      *) ;;
+  esac
+}
+
 # make sure we have a src dir
 if [ ! -d src ]; then
   mkdir src
@@ -81,6 +89,9 @@ fi
 
 # install zsh
 test_or_install_app zsh
+
+# install xclip on linux only
+install_xclip
 
 # install jo
 install_jo
