@@ -1,5 +1,7 @@
 # bootstrap from the cmdln with this
+```
 wget -qO - https://raw.githubusercontent.com/hemna/.dotfiles/master/bootstrap.sh | bash
+```
 
 # setting up env
 Run setup.sh
