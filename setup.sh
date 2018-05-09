@@ -7,13 +7,17 @@ cd .vim
 git submodule init
 git submodule update --init --recursive
 
+# TODO: Add YouCompleteMe back in when
+# the distros get a newer version of vim
+# https://github.com/Valloric/YouCompleteMe
+#
 # Need to build and install YouCompleteMe
 # need cmake and gcc-c++
 # sudo zypper in cmake gcc-c++ python-devel
-cd bundle/YouCompleteMe
-./install.py
+#cd bundle/YouCompleteMe
+#./install.py
 
-cd $oldpwd
+#cd $oldpwd
 
 # use this to setup the basic shell and pull what is needed
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
