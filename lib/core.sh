@@ -11,10 +11,13 @@ shootProfile(){
     KERNEL=`uname -r`
     MACH=`uname -m`
 
-    if [ "${OS}" == "windowsnt" ]; then
+    if [ "${OS}" = "windowsnt" ]; then
         OS=windows
-    elif [ "${OS}" == "darwin" ]; then
+    elif [ "${OS}" = "darwin" ]; then
         OS=mac
+        DIST="apple"
+        DistroBasedOn='RedHat'
+        REV=`sw_vers | grep ProductVersion | awk '{ print $2 }'`
     else
         OS=`uname`
         if [ "${OS}" = "SunOS" ] ; then
@@ -50,7 +53,7 @@ shootProfile(){
                 DIST="${DIST}[`cat /etc/UnitedLinux-release | tr "\n" ' ' | sed s/VERSION.*//`]"
             fi
             OS=`lowercase $OS`
-                        DIST=`lowercase $DIST`
+            DIST=`lowercase $DIST`
             DistroBasedOn=`lowercase $DistroBasedOn`
             readonly OS
             readonly DIST
