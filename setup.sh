@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-oldpwd=$PWD
+cd ~/.dotfiles
+./install_apps.sh
 
 # make sure .vim submodules are installed
-cd .vim
+cd ~/.dotfiles/.vim
 git submodule init
 git submodule update --init --recursive
 
@@ -20,14 +21,20 @@ git submodule update --init --recursive
 #cd $oldpwd
 
 # use this to setup the basic shell and pull what is needed
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+if [ ! -d ~/.oh-my-zsh ]; then
+  git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+else
+    cd ~/.oh-my-zsh
+    git submodule update --init --recursive
+fi
 
 iszsh=`command -v zsh | wc -l`
 
 # only set to zsh if it exists
-if [ iszsh -eq 1 ]; then
+if [ $iszsh -eq 1 ]; then
   chsh -s $(which zsh)
 fi
 
+cd ~/.dotfiles
 ./link.sh

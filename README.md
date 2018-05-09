@@ -1,9 +1,10 @@
+# bootstrap from the cmdln with this
+```
+wget -qO - https://raw.githubusercontent.com/hemna/.dotfiles/master/bootstrap.sh | bash
+```
+
 # setting up env
 Run setup.sh
-This will pull the zsh .oh-my-zsh repo as well as the custom
-powerline theme for oh-my-zsh
-and then switch the user's default shell to zsh
-
-
-# linking it all up
-run link.sh
+This will install all the apps needed for my standard super bitchen zsh 
+setup. It will pull down all the .vim submodules and install them, and then
+finally link all the . files to ~
