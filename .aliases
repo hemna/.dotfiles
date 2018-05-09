@@ -1,4 +1,6 @@
-# This file contains common aliases for both zsh and bashrc
+#!/bin/bash
+#
+## This file contains common aliases for both zsh and bashrc
 
 # Functions
 alias zshrc="vim ~/.zshrc && source ~/.zshrc"
@@ -7,7 +9,11 @@ alias vssh="vagrant ssh"
 # run git pull origin master in every subdirectory from .
 alias gp="find . -name .git -type d -execdir git pull origin master -v ';'"
 
-alias ll='ls -lhFA --color=auto'
+if [ "$OS" = "mac" ]; then
+  alias ll='ls -lhFA'
+else
+  alias ll='ls -lhFA --color=auto'
+fi
 #alias mvn='mvn -P \!create-iso,\!create-installation,\!local-server'
 alias mvn='mvn -P \!create-iso,\!create-installation'
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"

@@ -108,6 +108,10 @@ if [ -f /home/waboring/.hostloadcolour ]; then
     hostloadcolour
 fi
 
+if [ -e ~/.dotfiles/lib/core.sh ]; then
+    source ~/.dotfiles/lib/core.sh
+fi
+
 # transfer.sh support
 # useage
 # transfer <filename>
@@ -115,9 +119,8 @@ if [ -f ~/.transfer.sh ]; then
     source ~/.transfer.sh
 fi
 
-
 # System dependent options here
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ "$OS" == "linux" ]]; then
     # ...
     # Useful shell options
     shopt -s globstar    # permit patterns like **/*.jar to match any jar below
@@ -132,16 +135,16 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
         #alias vdir='ls --color=auto --format=long'
     fi
 
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+elif [[ "$OS" == "darwin"* ]]; then
     # Mac OSX
     export CLICOLOR=1
     export LSCOLORS=ExFxBxDxCxegedabagacad
     alias ls='ls -GFh'
 fi
 
+
 # Pull in the common aliases
 source ~/.aliases
-
 
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
@@ -163,50 +166,4 @@ elif [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerli
     source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
 elif [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
     source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-fi
-
-
-HOSTNAME=`hostname`
-HOMEDEV="Hemna-Virt"
-MAC_DESKTOP="Walters-Mac-Pro.local"
-MAC_LAPTOP="Walters-MacBook-Pro.local"
-
-if [ "$HOSTNAME" == "$HOMEDEV" ]; then 
-    # Go
-    export GOROOT="/usr/local/go"
-    export GOPATH=$HOME/gocode
-
-    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/.bin
-
-    alias avwx='chromium-browser --user-data-dir=~/.ass --allow-file-access-from-files --disable-web-security /home/waboring/workspace/AviationWeatherHD/index.html'
-
-    #. ~/.liquidprompt/liquidprompt
-    #(play -q -n synth sine F2 sine C3 remix - fade 0 1 .1 norm -4 bend 0.5,2399,2 fade 0 1 0.5 2&>/dev/null &)
-    #(play -q -n synth sine F2 sine C3 remix - fade 0 1 .1 norm -4 bend 0.5,2399,2 fade 0 1 0.5 gain -10 2&>/dev/null &)
-    #(play -q -n synth sine F2 sine C3 remix - fade 0 1 .1 norm -4 bend 0.5,2399,2 gain -10 fade 0 1 0.5  2&>/dev/null &)
-    #screenfetch -A 'tux' -E
-    #fortune -s -o 2>&1 > /tmp/fortune.ass
-    #spd-say -e -i -50 -r +25 </tmp/fortune.ass >/dev/null
-    #cat /tmp/fortune.ass|cowsay
-    #rm /tmp/fortune.ass
-
-    # Weather shit
-    #curl http://wttr.in/95664
-    #wego
-elif [ "$HOSTNAME" == "$MAC_DESKTOP" ] || [ "$HOSTNAME" == "$MAC_LAPTOP" ]; then
-    export GOROOT="/usr/local/go"
-    export GOPATH=$HOME/devel/go/gocode
-
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
-        . $(brew --prefix)/etc/bash_completion
-    fi
-
-    alias v="mvim -v"
-    export GOPATH=$HOME/go
-    export PATH=$PATH:$GOPATH/bin:~/.bin
-    #export ANDROIDSDK="/Applications/Android Studio.app/Contents/bin"
-    export ANDROIDSDK=$HOME/devel/android/android-sdk
-    export ANDROIDNDK=$HOME/devel/android/android-ndk-r14b/bin
-    export ANDROIDNDKVER="r14b"
-
 fi
