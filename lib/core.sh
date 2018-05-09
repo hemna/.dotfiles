@@ -49,6 +49,7 @@ shootProfile(){
 				DIST="${DIST}[`cat /etc/UnitedLinux-release | tr "\n" ' ' | sed s/VERSION.*//`]"
 			fi
 			OS=`lowercase $OS`
+                        DIST=`lowercase $DIST`
 			DistroBasedOn=`lowercase $DistroBasedOn`
 		 	readonly OS
 		 	readonly DIST
@@ -62,11 +63,11 @@ shootProfile(){
 	fi
 }
 shootProfile
-echo "OS: $OS"
-echo "DIST: $DIST"
-echo "PSUEDONAME: $PSUEDONAME"
-echo "REV: $REV"
-echo "DistroBasedOn: $DistroBasedOn"
-echo "KERNEL: $KERNEL"
-echo "MACH: $MACH"
-echo "========"
+#echo "OS: $OS"
+#echo "DIST: $DIST"
+#echo "PSUEDONAME: $PSUEDONAME"
+#echo "REV: $REV"
+#echo "DistroBasedOn: $DistroBasedOn"
+#echo "KERNEL: $KERNEL"
+#echo "MACH: $MACH"
+#echo "========"
