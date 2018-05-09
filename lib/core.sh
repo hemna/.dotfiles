@@ -30,22 +30,22 @@ shootProfile(){
             if [ -f /etc/redhat-release ] ; then
                 DistroBasedOn='RedHat'
                 DIST=`cat /etc/redhat-release |sed s/\ release.*//`
-                PSUEDONAME=`cat /etc/redhat-release | sed s/.*\(// | sed s/\)//`
+                PSEUDONAME=`cat /etc/redhat-release | sed s/.*\(// | sed s/\)//`
                 REV=`cat /etc/redhat-release | sed s/.*release\ // | sed s/\ .*//`
             elif [ -f /etc/SuSE-release ] ; then
                 DIST='suse'
                 DistroBasedOn='SuSe'
-                PSUEDONAME=`cat /etc/SuSE-release | tr "\n" ' '| sed s/VERSION.*//`
-                REV=`cat /etc/SuSE-release | tr "\n" ' ' | sed s/.*=\ //`
+                PSEUDONAME=`lsb_release -a | grep Description | cut -f2-`
+                REV=`lsb_release -a | grep Release | cut -f2-`
             elif [ -f /etc/mandrake-release ] ; then
                 DistroBasedOn='Mandrake'
-                PSUEDONAME=`cat /etc/mandrake-release | sed s/.*\(// | sed s/\)//`
+                PSEUDONAME=`cat /etc/mandrake-release | sed s/.*\(// | sed s/\)//`
                 REV=`cat /etc/mandrake-release | sed s/.*release\ // | sed s/\ .*//`
             elif [ -f /etc/debian_version ] ; then
                 DistroBasedOn='Debian'
                 if [ -f /etc/lsb-release ] ; then
                         DIST=`cat /etc/lsb-release | grep '^DISTRIB_ID' | awk -F=  '{ print $2 }'`
-                            PSUEDONAME=`cat /etc/lsb-release | grep '^DISTRIB_CODENAME' | awk -F=  '{ print $2 }'`
+                            PSEUDONAME=`cat /etc/lsb-release | grep '^DISTRIB_CODENAME' | awk -F=  '{ print $2 }'`
                             REV=`cat /etc/lsb-release | grep '^DISTRIB_RELEASE' | awk -F=  '{ print $2 }'`
                         fi
             fi
@@ -58,7 +58,7 @@ shootProfile(){
             readonly OS
             readonly DIST
             readonly DistroBasedOn
-            readonly PSUEDONAME
+            readonly PSEUDONAME
             readonly REV
             readonly KERNEL
             readonly MACH
