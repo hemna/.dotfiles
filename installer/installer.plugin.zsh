@@ -17,14 +17,14 @@ case $OS in
         ;;
     'linux')
         if [[ "$DIST" == "ubuntu" ]]; then
-            alias in="apt-get install"
-            alias up="apt-get upgrade"
+            alias in="sudo -E apt-get install"
+            alias up="sudo -E apt-get upgrade"
         elif [[ "$DIST" == "suse" ]]; then
-            alias in="zypper in"
-            alias up="zypper up"
+            alias in="sudo -E zypper in"
+            alias up="sudo -E zypper up"
         elif [[ "$DIST" == "redhat" ]]; then
-            alias in="yum install"
-            alias up="yup upgrade"
+            alias in="sudo -E yum install"
+            alias up="sudo -E yup upgrade"
         fi
         ;;
     *) ;;
