@@ -12,19 +12,19 @@ source core.sh
 
 case $OS in
     'mac') 
-        alias install='brew install'
-        alias upgrade='brew upgrade'
+        alias in='brew install'
+        alias up='brew upgrade'
         ;;
     'linux')
         if [[ "$DIST" == "ubuntu" ]]; then
-            alias install="apt-get install"
-            alias upgrade="apt-get upgrade"
+            alias in="apt-get install"
+            alias up="apt-get upgrade"
         elif [[ "$DIST" == "suse" ]]; then
-            alias install="zypper in"
-            alias upgrade="zypper up"
+            alias in="zypper in"
+            alias up="zypper up"
         elif [[ "$DIST" == "redhat" ]]; then
-            alias install="yum install"
-            alias upgrade="yup upgrade"
+            alias in="yum install"
+            alias up="yup upgrade"
         fi
         ;;
     *) ;;
