@@ -75,9 +75,17 @@ function install_jo() {
 }
 
 function install_xcip() {
-  # on the Mac, we can use brew
+  # mac already has pbcopy
   case $OS in
       'linux') test_or_install xclip ;;
+      *) ;;
+  esac
+}
+
+function install_coreutils() {
+  # on the Mac, we can use brew
+  case $OS in
+      'mac') install_app coreutils ;;
       *) ;;
   esac
 }
@@ -89,6 +97,9 @@ fi
 
 # install zsh
 test_or_install_app zsh
+
+# install coreutils on mac only
+install_coreutils
 
 # install xclip on linux only
 install_xclip
