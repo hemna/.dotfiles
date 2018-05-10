@@ -34,7 +34,20 @@ maybe=(jnrow jreese kennethreitz maran minimal muse nanotech norm negirhos)
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 # pick a random theme from the bitches I like.
 my_theme_len=$((${#my_themes[@]}-1))
-pick=`shuf -i 1-$my_theme_len -n 1`
+is_shuf=`command -v shuf |wc -l`
+if [ $is_shuf -eq 1 ]; then
+  pick=`shuf -i 1-$my_theme_len -n 1`
+else
+  # Mac doesn't have shuf, it has gshuf 
+  # if you install coreutils
+  is_gshuf=`command -v gshuf | wc -l`
+  if [ $is_gshuf -eq 1 ]; then
+    pick=`gshuf -i 1-$my_theme_len -n 1`
+  else
+    pick="xiong-chiamiov-plus"
+    echo "please install coreutils"
+  fi
+fi
 ZSH_THEME="${my_themes[$pick]}"
 #ZSH_THEME="xiong-chiamiov-plus"
 
