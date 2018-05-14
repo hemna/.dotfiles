@@ -74,10 +74,10 @@ function install_jo() {
   esac
 }
 
-function install_xcip() {
+function install_xclip() {
   # mac already has pbcopy
   case $OS in
-      'linux') test_or_install xclip ;;
+      'linux') test_or_install_app xclip ;;
       *) ;;
   esac
 }

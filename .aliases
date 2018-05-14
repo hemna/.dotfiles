@@ -16,7 +16,6 @@ else
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
-#alias mvn='mvn -P \!create-iso,\!create-installation,\!local-server'
 alias mvn='mvn -P \!create-iso,\!create-installation'
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
 alias vssh="vagrant ssh"
@@ -25,7 +24,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias moer="more"
-alias install="sudo apt-get install"
+#alias install="sudo apt-get install"
 alias archey="pyarchey"
 alias xdg="xdg-open"
 alias google="chromium-browser http://www.gogle.com"
