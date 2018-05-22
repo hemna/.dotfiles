@@ -32,3 +32,6 @@
 	path = .vim/bundle/vim-better-whitespace
 	url = git://github.com/ntpeters/vim-better-whitespace.git
 	branch = master
+[submodule ".vim/bundle/vim-autopep8"]
+	path = .vim/bundle/vim-autopep8
+	url = https://github.com/tell-k/vim-autopep8
