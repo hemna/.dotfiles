@@ -50,4 +50,5 @@ alias hlm006="ssh ardana@10.84.81.1"
 alias devbm="ssh -X waboring@10.84.128.7"
 alias devbm2="ssh -X waboring@10.84.128.24"
 
-alias devceph="ssh l3@10.84.56.6"
+#alias devceph="ssh l3@10.84.56.6"
+alias devceph="ssh waboring@10.84.56.6"

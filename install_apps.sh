@@ -90,6 +90,12 @@ function install_coreutils() {
   esac
 }
 
+
+# needed for the vim-autopep8 plugin
+function install_autopep8() {
+    test_or_install_app autopep8
+}
+
 # make sure we have a src dir
 if [ ! -d src ]; then
   mkdir src
@@ -106,3 +112,6 @@ install_xclip
 
 # install jo
 install_jo
+
+# install autopep8
+install_autopep8
