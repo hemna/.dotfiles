@@ -38,7 +38,8 @@ maybe=(
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 #ZSH_THEME="xiong-chiamiov-plus"
 # pick a random theme from the bitches I like.
-ZSH_THEME="random"
+ZSH_THEME="xiong-chiamiov-plus"
+#ZSH_THEME="random"
 ZSH_THEME_RANDOM_CANDIDATES=($my_themes)
 #(
 #    "powerlevel9k/powerlevel9k" "xiong-chiamiov-plus" "gnzh" "ys"
