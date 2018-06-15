@@ -52,3 +52,7 @@ alias devbm2="ssh -X waboring@10.84.128.24"
 
 #alias devceph="ssh l3@10.84.56.6"
 alias devceph="ssh waboring@10.84.56.6"
+
+# some ansible shortcuts
+alias apcp='ansible-playbook -i hosts/localhost config-processor-run.yml -e encrypt="" -e rekey=""'
+alias aprd="ansible-playbook -i hosts/localhost ready-deployment.yml"
