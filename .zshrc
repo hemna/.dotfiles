@@ -10,11 +10,13 @@ export TERM="xterm-256color"
 if [[ `uname` == 'Linux' ]]
 then
   export ZSH=~/.oh-my-zsh
+  export DOTFILES=~/.dotfiles
 fi
 
 if [[ `uname` == 'Darwin' ]]
 then
   export ZSH=/Users/waboring/.oh-my-zsh
+  export DOTFILES=/Users/waboring/.dotfiles
 fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -95,6 +97,7 @@ plugins=(autopep8 battery cloudapp docker extract git git-extras python \
     suse tig vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
+source $DOTFILES/dotfiles.sh
 
 # User configuration
 
