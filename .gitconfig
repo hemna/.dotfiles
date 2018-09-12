@@ -82,3 +82,5 @@
 [github]
 	user = hemna
 	email = waboring@hemna.com
+[credential]
+	helper = cache
