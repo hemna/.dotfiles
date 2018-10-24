@@ -154,3 +154,6 @@ fi
 alias cp='nocorrect cp '
 alias mv='nocorrect mv '
 alias mkdir='nocorrect mkdir '
+
+# Disable sharing of history between shells
+unsetopt share_history
