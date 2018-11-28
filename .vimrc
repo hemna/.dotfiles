@@ -15,9 +15,10 @@ set number
 call pathogen#infect()
 call pathogen#helptags()
 
-syntax on
 filetype plugin indent on
 filetype on
+syntax on
+runtime macros/matchit.vim
 
 nnoremap <leader>v <Plug>TaskList
 map <leader>td <Plug>TaskList

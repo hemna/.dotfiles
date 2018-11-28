@@ -90,6 +90,11 @@ function install_coreutils() {
   esac
 }
 
+# needed for the vim-data
+function install_vimdata() {
+    test_or_install_app vim-data
+}
+
 
 # needed for the vim-autopep8 plugin
 function install_autopep8() {
@@ -114,4 +119,5 @@ install_xclip
 install_jo
 
 # install autopep8
+install_vimdata
 install_autopep8
