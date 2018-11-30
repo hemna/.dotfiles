@@ -2,6 +2,6 @@
 
 cd ~
 echo "Clone the repo"
-git clone https://github.com/hemna/.dotfiles
+git clone git@github.com:hemna/.dotfiles.git
 cd .dotfiles
 ./setup.sh
