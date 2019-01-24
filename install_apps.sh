@@ -108,9 +108,11 @@ fi
 
 # install zsh
 test_or_install_app zsh
+test_or_install_app lnav
 
 # install coreutils on mac only
 install_coreutils
+test_or_install_app lnav
 
 # install xclip on linux only
 install_xclip
