@@ -86,3 +86,5 @@
 	helper = cache
 [rerere]
 	enabled = true
+[branch]
+	autosetuprebase = always
