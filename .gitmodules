@@ -32,3 +32,12 @@
 	path = .vim/bundle/vim-better-whitespace
 	url = git://github.com/ntpeters/vim-better-whitespace.git
 	branch = master
+[submodule ".vim/bundle/vim-autopep8"]
+	path = .vim/bundle/vim-autopep8
+	url = https://github.com/tell-k/vim-autopep8
+[submodule ".vim/bundle/AnsiEsc"]
+	path = .vim/bundle/AnsiEsc
+	url = https://github.com/powerman/vim-plugin-AnsiEsc.git
+[submodule ".vim/bundle/vim-matchup"]
+	path = .vim/bundle/vim-matchup
+	url = https://github.com/andymass/vim-matchup

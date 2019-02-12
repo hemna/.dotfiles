@@ -1,4 +1,6 @@
-# This file contains common aliases for both zsh and bashrc
+#!/bin/bash
+#
+## This file contains common aliases for both zsh and bashrc
 
 # Functions
 alias zshrc="vim ~/.zshrc && source ~/.zshrc"
@@ -7,8 +9,13 @@ alias vssh="vagrant ssh"
 # run git pull origin master in every subdirectory from .
 alias gp="find . -name .git -type d -execdir git pull origin master -v ';'"
 
-alias ll='ls -lhFA --color=auto'
-#alias mvn='mvn -P \!create-iso,\!create-installation,\!local-server'
+if [ "$OS" = "mac" ]; then
+  alias ll='ls -lhFA'
+else
+  alias ll='ls -lhFA --color=auto'
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
 alias mvn='mvn -P \!create-iso,\!create-installation'
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
 alias vssh="vagrant ssh"
@@ -17,7 +24,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias moer="more"
-alias install="sudo apt-get install"
+#alias install="sudo apt-get install"
 alias archey="pyarchey"
 alias xdg="xdg-open"
 alias google="chromium-browser http://www.gogle.com"
@@ -33,12 +40,19 @@ alias devs="ssh -X 192.168.1.113"
 
 # SUSE
 alias hlm002="ssh ardana@10.84.43.81"
-alias hlm007="ssh stack@10.84.81.17"
+alias hlm003="ssh stack@10.84.43.97"
+alias hlm007="ssh ardana@10.84.81.17"
+alias hlm102="ssh ardana@10.84.84.56"
 alias hlm201="ssh ardana@10.84.88.1"
 alias hlm202="ssh stack@10.84.89.1"
 alias hlm004="ssh ardana@10.84.43.135"
-alias hlm006="ssh stack@10.84.81.1"
+alias hlm006="ssh ardana@10.84.81.1"
 alias devbm="ssh -X waboring@10.84.128.7"
-alias devbm2="ssh -X waboring@10.84.128.24"
+alias devbm2="ssh -X waboring@10.84.128.34"
 
-alias devceph="ssh l3@10.84.56.6"
+#alias devceph="ssh l3@10.84.56.6"
+alias devceph="ssh waboring@10.84.56.6"
+
+# some ansible shortcuts
+alias apcp='ansible-playbook -i hosts/localhost config-processor-run.yml -e encrypt="" -e rekey=""'
+alias aprd="ansible-playbook -i hosts/localhost ready-deployment.yml"

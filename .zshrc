@@ -10,11 +10,13 @@ export TERM="xterm-256color"
 if [[ `uname` == 'Linux' ]]
 then
   export ZSH=~/.oh-my-zsh
+  export DOTFILES=~/.dotfiles
 fi
 
 if [[ `uname` == 'Darwin' ]]
 then
   export ZSH=/Users/waboring/.oh-my-zsh
+  export DOTFILES=/Users/waboring/.dotfiles
 fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -25,7 +27,28 @@ fi
 #
 # To install this theme
 # git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-ZSH_THEME="powerlevel9k/powerlevel9k"
+my_themes=(
+    "powerlevel9k/powerlevel9k" "xiong-chiamiov-plus" "gnzh" "ys"
+    "takashiyoshida" "suvash"
+    "strug" "steeef" "smt" "simonoff" "rkj" "rkj-repos"
+    "rgm" "pygmalion" "mortalscumbag" "linuxonly"
+    )
+maybe=(
+    "jnrow" "jreese" "kennethreitz" "maran" "minimal"
+    "muse" "nanotech" "norm" "negirhos" "superjarin"
+    )
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="xiong-chiamiov-plus"
+# pick a random theme from the bitches I like.
+ZSH_THEME="xiong-chiamiov-plus"
+#ZSH_THEME="random"
+ZSH_THEME_RANDOM_CANDIDATES=($my_themes)
+#(
+#    "powerlevel9k/powerlevel9k" "xiong-chiamiov-plus" "gnzh" "ys"
+#    "takashiyoshida" "suvash"
+#    "strug" "steeef" "smt" "simonoff" "rkj" "rkj-repos"
+#    "rgm" "pygmalion" "mortalscumbag" "linuxonly"
+#    )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -69,9 +92,12 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autopep8 docker git python screen sudo suse tig vagrant)
+plugins=(autopep8 battery cloudapp docker extract git git-extras python \
+    screen sudo \
+    suse tig vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
+source $DOTFILES/dotfiles.sh
 
 # User configuration
 
@@ -100,6 +126,10 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator ssh command_execution_
 #
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
+if [ -e ~/.dotfiles/lib/core.sh ]; then
+    source ~/.dotfiles/lib/core.sh
+fi
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -124,3 +154,6 @@ fi
 alias cp='nocorrect cp '
 alias mv='nocorrect mv '
 alias mkdir='nocorrect mkdir '
+
+# Disable sharing of history between shells
+unsetopt share_history

@@ -9,14 +9,16 @@ set background=dark
 set modeline
 set foldmethod=indent
 set foldlevel=99
-set colorcolumn=80
+set colorcolumn=79
+set number
 
 call pathogen#infect()
 call pathogen#helptags()
 
-syntax on
 filetype plugin indent on
 filetype on
+syntax on
+runtime macros/matchit.vim
 
 nnoremap <leader>v <Plug>TaskList
 map <leader>td <Plug>TaskList
@@ -42,7 +44,11 @@ set laststatus=2
 set t_Co=256
 
 let g:gitgutter_enabled=1
-set signcolumn=yes
+if exists('&signcolumn')  " VIM 7.4.2201
+  set signcolumn=yes
+else
+    let g:gitgutter_sign_volumn_always = 1
+endif
 set showcmd
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -74,3 +80,20 @@ au VimEnter * RainbowParenthesesToggle
 
 
 let g:pymode_rope_regenerate_on_write = 0
+
+"autopep8
+let g:autopep8_disable_show_diff=1
+let g:autopep8_ignore=""
+let g:autopep8_max_line_length=79
+
+if has("user_commands")
+    command! -bang -nargs=? -complete=file E e<bang> <args>
+    command! -bang -nargs=? -complete=file W w<bang> <args>
+    command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+    command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+    command! -bang Wa wa<bang>
+    command! -bang WA wa<bang>
+    command! -bang Q q<bang>
+    command! -bang QA qa<bang>
+    command! -bang Qa qa<bang>
+endif
