@@ -49,6 +49,7 @@ alias hlm004="ssh ardana@10.84.43.135"
 alias hlm006="ssh ardana@10.84.81.1"
 alias devbm="ssh -X waboring@10.84.128.7"
 alias devbm2="ssh -X waboring@10.84.128.34"
+alias devtun="sshuttle -e 'ssh -X' -r waboring@10.84.128.34 192.168.121.0/24 192.168.245.0/24"
 
 #alias devceph="ssh l3@10.84.56.6"
 alias devceph="ssh waboring@10.84.56.6"
