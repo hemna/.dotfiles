@@ -138,8 +138,11 @@ echo "Time per image = ${TIME_PER_FRAME}ms"
 #-vf scale=${WIDTH}:${HEIGHT} -o ${FILENAME} -mf type=jpeg:fps=$RATE $RUNLENOPT mf://@files.txt"
 
 #this works on the PS3
-CMD="nice -n 11 ${MENCODER} -nosound -ovc xvid -xvidencopts bitrate=${BITRATE}:chroma_opt:vhq=4:bvhq=1:quant_type=mpeg \
--vf pp=de,scale=${WIDTH}:${HEIGHT} -o ${FILENAME} -mf type=jpeg:fps=${RATE} ${RUNLENOPT} mf://@files.txt"
+#CMD="nice -n 11 ${MENCODER} -nosound -ovc xvid -xvidencopts bitrate=${BITRATE}:chroma_opt:vhq=4:bvhq=1:quant_type=mpeg \
+#-vf pp=de,scale=${WIDTH}:${HEIGHT} -o ${FILENAME} -mf type=jpeg:fps=${RATE} ${RUNLENOPT} mf://@files.txt"
+
+CMD="nice -n 11 ${MENCODER} -nosound -ovc x264 -vf scale=1920:1080 \
+-o ${FILENAME} -mf type=jpeg:fps=${RATE} ${RUNLENOPT} mf://@files.txt"
 
 
 echo $CMD
