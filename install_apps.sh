@@ -118,7 +118,7 @@ test_or_install_app lnav
 install_xclip
 
 # install jo
-install_jo
+# install_jo
 
 # install autopep8
 install_vimdata
