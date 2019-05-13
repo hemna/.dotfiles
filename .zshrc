@@ -124,6 +124,10 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator ssh command_execution_
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 #
 #
+# enable bash-completion compatibility
+autoload bashcompinit
+bashcompinit
+
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 if [ -e ~/.dotfiles/lib/core.sh ]; then
@@ -143,7 +147,7 @@ fi
 source ~/.aliases
 
 # add anything in the ~/.bin to the path
-export PATH=$PATH:~/.bin:/sbin
+export PATH=$PATH:~/.bin:/sbin:~/.local/bin
 
 # Add any local settings that aren't in .dotfiles
 if [[ -s ~/.local.sh ]]; then
@@ -157,3 +161,12 @@ alias mkdir='nocorrect mkdir '
 
 # Disable sharing of history between shells
 unsetopt share_history
+
+#for pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
