@@ -170,3 +170,11 @@ elif [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerli
 elif [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
     source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
