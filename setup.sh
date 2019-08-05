@@ -29,6 +29,9 @@ else
     git submodule update --init --recursive
 fi
 
+# try and setup fish
+source setup_fish.sh
+
 iszsh=`command -v zsh | wc -l`
 
 # only set to zsh if it exists
