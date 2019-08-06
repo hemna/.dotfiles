@@ -145,6 +145,9 @@ fi
 
 # Pull in the common aliases
 source ~/.aliases
+if [ -f ~/.aliases_bash ]; then
+    source ~/.aliases_bash
+fi
 
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
