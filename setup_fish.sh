@@ -13,3 +13,6 @@ else
     git pull origin
     git submodule update --init --recursive
 fi
+
+# fish should be here now
+fish ~/.dotfiles/setup_fish_post.fish
