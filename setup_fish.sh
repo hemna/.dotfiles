@@ -15,4 +15,5 @@ else
 fi
 
 # fish should be here now
+cd ~/.dotfiles
 fish ~/.dotfiles/setup_fish_post.fish

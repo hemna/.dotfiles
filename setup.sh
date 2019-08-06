@@ -30,6 +30,7 @@ else
 fi
 
 # try and setup fish
+cd ~/.dotfiles
 source setup_fish.sh
 
 iszsh=`command -v zsh | wc -l`
