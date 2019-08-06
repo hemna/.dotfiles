@@ -101,6 +101,11 @@ function install_autopep8() {
     test_or_install_app autopep8
 }
 
+# install the virtualfish python lib
+function install_virtualfish() {
+    sudo pip install virtualfish
+}
+
 # make sure we have a src dir
 if [ ! -d src ]; then
   mkdir src
@@ -123,3 +128,6 @@ install_xclip
 # install autopep8
 install_vimdata
 install_autopep8
+
+# install virtualfish
+install_virtualfish

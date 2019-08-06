@@ -24,6 +24,8 @@ if not functions -q fisher
     fish -c fisher
 end
 
-set -U __done_min_cmd_duration 5000  # default: 5000 ms
-
-eval (python -m virtualfish)
+# virtualfish support here
+#  https://virtualfish.readthedocs.io/en/latest/index.html
+# virtualfish plugins
+# https://virtualfish.readthedocs.io/en/latest/plugins.html
+eval (python -m virtualfish auto_activation)
