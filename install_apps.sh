@@ -101,6 +101,11 @@ function install_autopep8() {
     test_or_install_app autopep8
 }
 
+# install the fish shell
+function install_fish() {
+  test_or_install_app fish
+}
+
 # install the virtualfish python lib
 function install_virtualfish() {
     sudo pip install virtualfish
@@ -128,6 +133,9 @@ install_xclip
 # install autopep8
 install_vimdata
 install_autopep8
+
+# install fish
+install_fish
 
 # install virtualfish
 install_virtualfish
