@@ -41,3 +41,6 @@
 [submodule ".vim/bundle/vim-matchup"]
 	path = .vim/bundle/vim-matchup
 	url = https://github.com/andymass/vim-matchup
+[submodule ".vim/bundle/vim-fish"]
+	path = .vim/bundle/vim-fish
+	url = https://github.com/dag/vim-fish.git
