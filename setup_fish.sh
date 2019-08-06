@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ ! -d ~/.config/fish ]; then
+    mkdir ~/.config/fish
+fi
+
 if [ ! -d ~/.oh-my-fish ]; then
     git clone https://github.com/oh-my-fish/oh-my-fish
     cd oh-my-fish
