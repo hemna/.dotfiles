@@ -1,1 +1,0 @@
-/Users/waboring/.oh-my-fish/themes/batman/fish_prompt.fish
