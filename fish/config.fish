@@ -7,10 +7,10 @@
 #
 # see common/cool fish functions/packages
 # https://github.com/jorgebucaran/awesome-fish
+fish_vi_key_bindings
 
 source ~/.dotfiles/lib/core.fish
 
-#  
 set -g -x WORK_VAG_NET "192.168.121.0/24"
 set -g -x WORK_VAG_ARD_NET "192.168.245.0/24"
 set -g -x WORK_DE_NET "10.160.224.0/24"
