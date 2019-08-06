@@ -3,3 +3,9 @@ jo
 
 cache/*
 fish/fish_variables
+
+fish/conf.d/done.fish
+fish/conf.d/pisces_key_bindings.fish
+fish/conf.d/z.fish
+fish/functions/__z*
+fish/functions/_pisces*
