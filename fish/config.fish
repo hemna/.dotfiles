@@ -28,4 +28,4 @@ end
 #  https://virtualfish.readthedocs.io/en/latest/index.html
 # virtualfish plugins
 # https://virtualfish.readthedocs.io/en/latest/plugins.html
-eval (python -m virtualfish auto_activation)
+eval (python3 -m virtualfish auto_activation)
