@@ -6,14 +6,14 @@ function shootProfile
     set -x KERNEL (uname -r)
     set -x MACH (uname -m)
 
-    echo "OS = '$OS'"
+    #echo "OS = '$OS'"
 
     switch "$OS"
     case "windowsnt"
-        echo "FUcking windows"
+        #echo "FUcking windows"
         set -g -x OS 'windows'
     case "darwin"
-        echo "FUcking MAC"
+        #echo "FUcking MAC"
         set -g -x OS 'mac'
         set -g -x DIST "apple"
         set -g -x ARCH (uname -p)
@@ -21,12 +21,12 @@ function shootProfile
         set -g -x DistroBasedOn 'RedHat'
         set -g -x REV (sw_vers | grep ProductVersion | awk '{ print $2 }')
     case "sunos"
-        echo "FUcking SUN"
+        #echo "FUcking SUN"
         set -g -x OS 'Solaris'
         set -g -x ARCH (uname -p)
         set -g -x OSSTR "$OS $REV($ARCH (uname -v))"
     case "aix"
-        echo "FUcking AIX"
+        #echo "FUcking AIX"
         set -g -x OSSTR "$OS (oslevel) ((oslevel -r))"
     case "linux"
         set -g -x OS $OS
@@ -34,24 +34,24 @@ function shootProfile
         set DIST (string lower $DIST)
         switch "$DIST"
         case "redhat"
-            echo "FUcking LINUX - Redhat"
+            #echo "FUcking LINUX - Redhat"
             set -g -x DistroBasedOn 'RedHat'
             set -g -x DIST (cat /etc/redhat-release |sed s/\ release.*//)
             set -g -x PSEUDONAME (cat /etc/redhat-release | sed s/.*\(// | sed s/\)//)
             set -g -x REV (cat /etc/redhat-release | sed s/.*release\ // | sed s/\ .*//)
         case "opensuse"
-            echo "FUcking LINUX - SUSE"
+            #echo "FUcking LINUX - SUSE"
             set -g -x DIST 'suse'
             set -g -x DistroBasedOn 'SuSe'
             set -g -x PSEUDONAME (lsb_release -a | grep Description | cut -f2-)
             set -g -x REV (lsb_release -a | grep Release | cut -f2-)
         case "mandrake"
-            echo "FUcking LINUX - Mandrake"
+            #echo "FUcking LINUX - Mandrake"
             set -g -x DistroBasedOn 'Mandrake'
             set -g -x PSEUDONAME (cat /etc/mandrake-release | sed s/.*\(// | sed s/\)//)
             set -g -x REV (cat /etc/mandrake-release | sed s/.*release\ // | sed s/\ .*//)
         case "debian"
-            echo "FUcking LINUX - Debian"
+            #echo "FUcking LINUX - Debian"
             set -g -x DistroBasedOn 'Debian'
             if test -e /etc/lsb-release
                 set -g -x DIST (cat /etc/lsb-release | grep '^DISTRIB_ID' | awk -F=  '{ print $2 }')
@@ -68,11 +68,11 @@ function shootProfile
 end
 
 shootProfile
-echo "OS: $OS"
-echo "DIST: $DIST"
-echo "PSUEDONAME: $PSUEDONAME"
-echo "REV: $REV"
-echo "DistroBasedOn: $DistroBasedOn"
-echo "KERNEL: $KERNEL"
+#echo "OS: $OS"
+#echo "DIST: $DIST"
+#echo "PSUEDONAME: $PSUEDONAME"
+#echo "REV: $REV"
+#echo "DistroBasedOn: $DistroBasedOn"
+#echo "KERNEL: $KERNEL"
 #echo "MACH: $MACH"
-echo "========"
+#echo "========"
