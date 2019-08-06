@@ -1,9 +1,9 @@
 if [ "$OS" = "mac" ]
   function ll
-    ls -lhFA
+     ls -lhFA
   end
 else
   function ll
-    ls -lhFA --color=auto
+     ls -lhFA --color=auto
   end
 end

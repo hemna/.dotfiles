@@ -22,5 +22,4 @@ link .vimrc
 link .tmux.conf
 link .bin
 
-
-ln -s $SRC/config.fish ~/.config/fish/config.fish
+ln -s $SRC/fish ~/.config

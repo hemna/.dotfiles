@@ -145,6 +145,12 @@ fi
 #
 #
 source ~/.aliases
+if [ -e ~/.dotfiles/.aliases_zsh ]; then
+    source ~/.dotfiles/.aliases_zsh
+fi
+
+if [ -e ~/.dotfiles/.aliases_zsh ]; then
+    source ~/.dotfiles/.aliases_zsh
 
 # add anything in the ~/.bin to the path
 export PATH=$PATH:~/.bin:/sbin:~/.local/bin
