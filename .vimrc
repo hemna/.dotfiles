@@ -97,3 +97,7 @@ if has("user_commands")
     command! -bang QA qa<bang>
     command! -bang Qa qa<bang>
 endif
+
+if &shell =~# 'fish$'
+    set shell=sh
+endif
