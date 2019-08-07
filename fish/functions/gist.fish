@@ -49,7 +49,7 @@ function gist
     #jq $jq_gist_post | curl -sS $curl_opts | jq $jq_result > /tmp/gist_url
     curl -sS $curl_opts | jq $jq_result > /tmp/gist_url
     #echo "done with jq"
-	cat /tmp/gist_url | pbcopy
+    #cat /tmp/gist_url | pbcopy
 	cat /tmp/gist_url
 
     rm $tmpfile
