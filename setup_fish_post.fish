@@ -1,3 +1,4 @@
+#!/usr/bin/env fish
 # This sets up the fish shell and stuffs
 
 # install the batman shell theme
