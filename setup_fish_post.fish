@@ -9,3 +9,4 @@ fisher add franciscolourenco/done
 fisher add jethrokuan/z
 fisher add jorgebucaran/fish-spark
 fisher add laughedelic/pisces
+fisher add jichu4n/fish-command-timer

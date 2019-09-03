@@ -29,3 +29,6 @@ end
 # virtualfish plugins
 # https://virtualfish.readthedocs.io/en/latest/plugins.html
 eval (python3 -m virtualfish auto_activation)
+
+# Enable the command timer
+source ~/.conf/fish/conf.d/fish_command_timer.fish
