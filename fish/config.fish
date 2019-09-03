@@ -31,4 +31,4 @@ end
 eval (python3 -m virtualfish auto_activation)
 
 # Enable the command timer
-source ~/.conf/fish/conf.d/fish_command_timer.fish
+source ~/.config/fish/conf.d/fish_command_timer.fish
