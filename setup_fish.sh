@@ -1,7 +1,13 @@
 #!/bin/bash
 
+ABSPATH="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
+SRC=`dirname $ABSPATH`
+if [ ! -d ~/.config ]; then
+    mkdir ~/.config
+fi
+
 if [ ! -d ~/.config/fish ]; then
-    mkdir -p ~/.config/fish
+    ln -s $SRC/fish ~/.config
 fi
 
 if [ ! -d ~/.oh-my-fish ]; then
