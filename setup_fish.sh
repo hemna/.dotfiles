@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -d ~/.config/fish ]; then
-    mkdir ~/.config/fish
+    mkdir -p ~/.config/fish
 fi
 
 if [ ! -d ~/.oh-my-fish ]; then

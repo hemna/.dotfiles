@@ -3,6 +3,8 @@
 
 # install the batman shell theme
 omf install batman
+omf install cd
+omf install colorman
 
 # fisher package manager is bootstrapped in config.fish already
 fisher add franciscolourenco/done
