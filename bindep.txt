@@ -18,7 +18,7 @@ vim-data [platform:dpkg platform:rpm]
 lnav [platform:dpkg platform:rpm platform:brew]
 htop
 
-fish [platform:ubuntu platform:brew]
+fish [platform:ubuntu platform:brew platform:suse]
 
 # For openSUSE
 python2-autopep8 [platform:suse]
