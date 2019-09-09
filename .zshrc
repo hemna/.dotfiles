@@ -149,9 +149,6 @@ if [ -e ~/.dotfiles/.aliases_zsh ]; then
     source ~/.dotfiles/.aliases_zsh
 fi
 
-if [ -e ~/.dotfiles/.aliases_zsh ]; then
-    source ~/.dotfiles/.aliases_zsh
-
 # add anything in the ~/.bin to the path
 export PATH=$PATH:~/.bin:/sbin:~/.local/bin
 
@@ -176,5 +173,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
+
+
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
