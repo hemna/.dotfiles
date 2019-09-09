@@ -36,9 +36,9 @@ source setup_fish.sh
 iszsh=`command -v zsh | wc -l`
 
 # only set to zsh if it exists
-if [ $iszsh -eq 1 ]; then
-  chsh -s $(which zsh)
-fi
+#if [ $iszsh -eq 1 ]; then
+#  chsh -s $(which zsh)
+#fi
 
 cd ~/.dotfiles
 ./link.sh
