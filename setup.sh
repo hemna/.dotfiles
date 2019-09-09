@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 cd ~/.dotfiles
-./install_apps.sh
 
 # make sure .vim submodules are installed
 cd ~/.dotfiles/.vim
