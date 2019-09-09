@@ -15,6 +15,7 @@ libtool [platform:dpkg platform:rpm]
 xclip [platform:dpkg platform:rpm]
 autopep8 [platform:dpkg platform:redhat]
 vim-data [platform:dpkg platform:rpm]
+lnav [platform:dpkg platform:rpm platform:brew]
 
 fish [platform:ubuntu platform:brew]
 
