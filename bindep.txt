@@ -1,10 +1,11 @@
 # Bindep to describe what apps are required on which systems
 
+ansible
 
 # For MacOS
 coreutils [platform:brew]
-
-
+python [platform:brew]
+pip-completion [platform:brew]
 
 # For Ubuntu
 build-essential [platform:dpkg]
@@ -12,8 +13,12 @@ autoconf [platform:dpkg platform:rpm]
 automake [platform:dpkg platform:rpm]
 libtool [platform:dpkg platform:rpm]
 xclip [platform:dpkg platform:rpm]
-autopep8 [platform:dpkg platform:rpm]
-autopep8 [platform:dpkg platform:rpm]
+autopep8 [platform:dpkg platform:redhat]
+vim-data [platform:dpkg platform:rpm]
+
 fish [platform:ubuntu platform:brew]
 
 # For openSUSE
+python2-autopep8 [platform:suse]
+python3-autopep8 [platform:suse]
+jo [platform:suse]
