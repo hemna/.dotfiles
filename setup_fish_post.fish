@@ -12,3 +12,4 @@ fisher add jethrokuan/z
 fisher add jorgebucaran/fish-spark
 fisher add laughedelic/pisces
 fisher add jichu4n/fish-command-timer
+echo "source ~/.config/fish/conf.d/fish_command_timer.fish" >> ~/.config/fish/extras.fish

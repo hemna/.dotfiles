@@ -2,9 +2,6 @@
 
 ABSPATH="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
 SRC=`dirname $ABSPATH`
-if [ ! -d ~/.config ]; then
-    mkdir ~/.config
-fi
 
 if [ ! -d ~/.config/fish ]; then
     ln -s $SRC/fish ~/.config
@@ -22,4 +19,4 @@ fi
 
 # fish should be here now
 cd ~/.dotfiles
-fish ~/.dotfiles/setup_fish_post.fish
+~/.dotfiles/setup_fish_post.fish

@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -x
 
+if [ ! -d ~/.config ]; then
+    mkdir ~/.config
+fi
+
 cd ~/.dotfiles
 
 # make sure .vim submodules are installed
