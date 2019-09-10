@@ -17,6 +17,7 @@ autopep8 [platform:dpkg platform:redhat]
 vim-data [platform:dpkg platform:rpm]
 lnav [platform:dpkg platform:rpm platform:brew]
 htop
+lsb-release [platform:ubuntu platform:suse]
 
 fish [platform:ubuntu platform:brew platform:suse]
 
