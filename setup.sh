@@ -34,10 +34,10 @@ else
 fi
 
 # try and setup fish
-cd ~/.dotfiles
-source setup_fish.sh
+#cd ~/.dotfiles
+#source setup_fish.sh
 
-iszsh=`command -v zsh | wc -l`
+#iszsh=`command -v zsh | wc -l`
 
 # only set to zsh if it exists
 #if [ $iszsh -eq 1 ]; then
