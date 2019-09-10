@@ -1,0 +1,24 @@
+################
+# User Content #
+################
+
+# The list of remote repositories to add to zypper
+suse_package_repos:
+    - {name: "server_monitoring", url: "http://download.opensuse.org/repositories/server:/monitoring/openSUSE_Leap_15.1/"}
+    - {name: "shells_fish_release_3", url: "http://download.opensuse.org/repositories/shells:/fish:/release:/3/openSUSE_Leap_15.0/"}
+
+
+#debian_package_repos:
+#    - {name: "", url: ""}
+
+# what user are you trying to setup?
+username: vagrant
+
+# The url that contains your bindep.txt
+# file to use
+bindep_url: https://raw.githubusercontent.com/hemna/.dotfiles/master/bindep.txt
+
+# The list of dotfile urls (from github) to
+# pull and run setup.sh
+dotfiles_git_repos:
+   - {name: ".dotfiles", url: "https://github.com/hemna/.dotfiles", branch: "ansible"}
