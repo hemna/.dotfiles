@@ -19,4 +19,4 @@ fi
 
 # fish should be here now
 cd ~/.dotfiles
-~/.dotfiles/setup_fish_post.fish
+#~/.dotfiles/setup_fish_post.fish
