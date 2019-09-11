@@ -17,8 +17,9 @@ autopep8 [platform:dpkg platform:redhat]
 lnav [platform:dpkg platform:rpm platform:brew]
 htop
 lsb-release [platform:ubuntu platform:suse]
-
 fish [platform:ubuntu platform:brew platform:suse]
+python-autopep8 [platform:ubuntu]
+vim-autopep8 [platform:ubuntu]
 
 # For openSUSE
 python2-autopep8 [platform:suse]
@@ -26,3 +27,4 @@ python3-autopep8 [platform:suse]
 jo [platform:suse]
 hostname [platform:suse]
 vim-data [platform:suse]
+autopep8 [platform:suse]
