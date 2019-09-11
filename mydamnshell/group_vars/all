@@ -7,9 +7,8 @@ suse_package_repos:
     - {name: "server_monitoring", url: "http://download.opensuse.org/repositories/server:/monitoring/openSUSE_Leap_15.1/"}
     - {name: "shells_fish_release_3", url: "http://download.opensuse.org/repositories/shells:/fish:/release:/3/openSUSE_Leap_15.0/"}
 
-
-#debian_package_repos:
-#    - {name: "", url: ""}
+ubuntu_package_repos:
+    - {name: "fish3_ppa", url: "ppa:fish-shell/release-3"}
 
 # what user are you trying to setup?
 username: vagrant
