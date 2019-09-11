@@ -2,8 +2,9 @@ src
 jo
 
 cache/*
-fish/fish_variables
 
+fish/fish_variables
+fish/fishfile
 fish/conf.d/done.fish
 fish/conf.d/pisces_key_bindings.fish
 fish/conf.d/z.fish
