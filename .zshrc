@@ -15,8 +15,8 @@ fi
 
 if [[ `uname` == 'Darwin' ]]
 then
-  export ZSH=/Users/waboring/.oh-my-zsh
-  export DOTFILES=/Users/waboring/.dotfiles
+  export ZSH=$HOME/.oh-my-zsh
+  export DOTFILES=$HOME/.dotfiles
 fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
