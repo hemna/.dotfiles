@@ -44,6 +44,9 @@ source setup_fish.sh
 #  chsh -s $(which zsh)
 #fi
 
+# Install the vim setup
+curl -L https://github.com/hemna/spf13-vim/blob/walt/bootstrap.sh | bash
+
 cd ~/.dotfiles
 ./link.sh
 
