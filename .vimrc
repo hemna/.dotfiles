@@ -101,3 +101,7 @@ endif
 if &shell =~# 'fish$'
     set shell=sh
 endif
+
+autocmd BufEnter /hammer/ set et | let g:syntastic_python_checkers=["flake8"] | let g:syntastic_python_pyflakes_exec="pyflakes3" | let g:syntastic_python_flake8_exec="python3" | let g:syntastic_python_flake8_args=["-m", "flake8", "--max-line-length=120", "--ignore=E402,E741"]
+
+autocmd BufEnter /cinder/ let g:syntastic_python_checkers=['flake8'] | let g:syntastic_python_flake8_exec='.tox/pep8/bin/flake8'

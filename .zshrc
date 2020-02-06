@@ -40,7 +40,8 @@ maybe=(
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 #ZSH_THEME="xiong-chiamiov-plus"
 # pick a random theme from the bitches I like.
-ZSH_THEME="xiong-chiamiov-plus"
+#ZSH_THEME="xiong-chiamiov-plus"
+ZSH_THEME="walt-sap"
 #ZSH_THEME="random"
 ZSH_THEME_RANDOM_CANDIDATES=($my_themes)
 #(
@@ -153,8 +154,8 @@ fi
 export PATH=$PATH:~/.bin:/sbin:~/.local/bin
 
 # Add any local settings that aren't in .dotfiles
-if [[ -s ~/.local.sh ]]; then
-    source ~/.local.sh
+if [[ -s ~/.local.zsh ]]; then
+    source ~/.local.zsh
 fi
 
 # Disable correctall for cp
@@ -174,6 +175,5 @@ fi
 
 export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
 
-
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
