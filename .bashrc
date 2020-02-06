@@ -149,6 +149,11 @@ if [ -f ~/.aliases_bash ]; then
     source ~/.aliases_bash
 fi
 
+# Add any local settings that aren't in .dotfiles
+if [[ -s ~/.local.bash ]]; then
+    source ~/.local.bash
+fi
+
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 if [ -d "$HOME/.local/bin" ]; then
