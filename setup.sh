@@ -45,7 +45,7 @@ source setup_fish.sh
 #fi
 
 # Install the vim setup
-curl -L https://github.com/hemna/spf13-vim/blob/walt/bootstrap.sh | bash
+curl -L https://raw.githubusercontent.com/hemna/spf13-vim/walt/bootstrap.sh | bash
 
 cd ~/.dotfiles
 ./link.sh
