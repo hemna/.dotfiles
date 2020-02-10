@@ -22,3 +22,7 @@ link .screenrc
 link .tmux.conf
 link .bin
 link .vimrc.local
+
+
+# manually link the sap theme
+ln -s $SRC/walt-sap.zsh-theme ~/.oh-my-zsh/themes/walt-sap.zsh-theme

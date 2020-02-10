@@ -21,3 +21,6 @@ link .screenrc
 link .vimrc.local
 link .tmux.conf
 link .bin
+
+# remove manual add
+rm ~/.oh-my-zsh/themes/walt-sap.zsh-theme
