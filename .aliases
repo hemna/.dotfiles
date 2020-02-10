@@ -25,8 +25,8 @@ alias wx="wego -l '38.837333,-121.0187007'"
 
 # HOME
 alias laptop="ssh 192.168.1.113"
-alias homedev="ssh -X hemna.mynetgear.com"
-alias dev="ssh -X 192.168.1.44"
+alias homedev="ssh -X waboring@hemna.mynetgear.com"
+alias dev="ssh -X waboring@192.168.1.44"
 alias devs="ssh -X 192.168.1.113"
 
 # HomeLab

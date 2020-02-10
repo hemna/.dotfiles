@@ -1,0 +1,3 @@
+set colorcolumn=79
+" Set copy works from the mouse while in vim
+set mouse=v

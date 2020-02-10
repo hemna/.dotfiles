@@ -16,7 +16,8 @@ link .zshrc
 
 link .gitconfig
 link .screenrc
-link .vim
-link .vimrc
+#link .vim
+#link .vimrc
+link .vimrc.local
 link .tmux.conf
 link .bin
