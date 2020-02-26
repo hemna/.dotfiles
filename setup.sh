@@ -52,3 +52,7 @@ cd ~/.dotfiles
 
 # now install the iterm2 integration
 curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
+
+# Install notes
+curl -L https://raw.githubusercontent.com/pimterry/notes/latest-release/install.sh | bash
+
