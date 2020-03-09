@@ -22,6 +22,7 @@ link .screenrc
 link .tmux.conf
 link .bin
 link .vimrc.local
+link .iterm2.zsh
 
 
 # manually link the sap theme
