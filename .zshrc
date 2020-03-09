@@ -41,7 +41,12 @@ maybe=(
 #ZSH_THEME="xiong-chiamiov-plus"
 # pick a random theme from the bitches I like.
 #ZSH_THEME="xiong-chiamiov-plus"
-ZSH_THEME="walt-sap"
+if [[ -s ~/.oh-my-zsh/themes/walt-sap.theme ]]; then
+  ZSH_THEME="walt-sap"
+else
+  ZSH_THEME="xiong-chiamiov-plus"
+fi
+
 #ZSH_THEME="random"
 ZSH_THEME_RANDOM_CANDIDATES=($my_themes)
 #(
@@ -157,8 +162,8 @@ export PATH=$PATH:~/.bin:/sbin:~/.local/bin
 if [[ -s ~/.local.zsh ]]; then
     source ~/.local.zsh
 fi
-if [[ -s ~/.iterm2.zsh ]]; then
-    source ~/.iterm2.zsh
+if [[ -s ~/.bin/tab_color.py ]]; then
+    ./.bin/tab_color.py
 fi
 
 # Disable correctall for cp
