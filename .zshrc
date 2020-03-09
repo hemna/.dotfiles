@@ -157,6 +157,9 @@ export PATH=$PATH:~/.bin:/sbin:~/.local/bin
 if [[ -s ~/.local.zsh ]]; then
     source ~/.local.zsh
 fi
+if [[ -s ~/.iterm2.zsh ]]; then
+    source ~/.iterm2.zsh
+fi
 
 # Disable correctall for cp
 alias cp='nocorrect cp '
@@ -177,3 +180,5 @@ export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export EDITOR=vim
