@@ -163,7 +163,7 @@ if [[ -s ~/.local.zsh ]]; then
     source ~/.local.zsh
 fi
 if [[ -s ~/.bin/tab_color.py ]]; then
-    ./.bin/tab_color.py
+    ~/.bin/tab_color.py
 fi
 
 # Disable correctall for cp
