@@ -11,7 +11,7 @@ ubuntu_package_repos:
     - {name: "fish3_ppa", url: "ppa:fish-shell/release-3"}
 
 # what user are you trying to setup?
-username: vagrant
+username: waboring
 
 # The url that contains your bindep.txt
 # file to use
