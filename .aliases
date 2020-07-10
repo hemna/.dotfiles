@@ -21,16 +21,16 @@ alias moer="more"
 alias archey="pyarchey"
 alias xdg="xdg-open"
 alias google="chromium-browser http://www.gogle.com"
-alias wx="wego -l '38.837333,-121.0187007'"
+alias wx="curl wttr.in/Appomattox"
 
 # HOME
 alias laptop="ssh 192.168.1.113"
-alias homedev="ssh -X waboring@hemna.mynetgear.com"
-alias dev="ssh -X waboring@192.168.1.44"
-alias devs="ssh -X 192.168.1.113"
+alias homedev="ssh -Y waboring@hemna.mynetgear.com"
+alias dev="ssh -Y waboring@192.168.1.44"
+alias devs="ssh -Y 192.168.1.113"
 
 # HomeLab
-alias hpdev="ssh -X waboring@192.168.1.3"
+alias hpdev="ssh -Y waboring@192.168.1.3"
 
 #alias devceph="ssh l3@10.84.56.6"
 alias devceph="ssh waboring@10.84.56.6"
@@ -55,9 +55,9 @@ WORK_VAG_ARD_NET="192.168.245.0/24"
 WORK_DE_NET="10.160.224.0/24"
 HOME_NET="192.168.0.0/16"
 
-alias devtun="sshuttle -e 'ssh -X' -r waboring@10.84.128.34 ${WORK_VAG_NET} ${WORK_VAG_ARD_NET} ${WORK_DE_NET}"
-alias hometun="sshuttle -e 'ssh -X' -r waboring@hemna.mynetgear.com ${HOME_NET}"
-alias hptun="sshuttle -r waboring@192.168.1.3 192.168.122.0/24"
+alias devtun="sshuttle -e 'ssh -Y' -r waboring@10.84.128.34 ${WORK_VAG_NET} ${WORK_VAG_ARD_NET} ${WORK_DE_NET}"
+alias hometun="sshuttle -e 'ssh -Y' -r waboring@hemna.mynetgear.com ${HOME_NET}"
+alias hptun="sshuttle -r waboring@192.168.1.3 192.168.122.0/24 192.168.121.0/24 192.168.16.0/24"
 
 color_ssh () {
     ssh $*

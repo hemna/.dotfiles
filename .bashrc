@@ -186,3 +186,4 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
+export PATH="/usr/local/opt/sqlite/bin:$PATH"

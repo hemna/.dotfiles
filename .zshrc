@@ -41,7 +41,7 @@ maybe=(
 #ZSH_THEME="xiong-chiamiov-plus"
 # pick a random theme from the bitches I like.
 #ZSH_THEME="xiong-chiamiov-plus"
-if [[ -s ~/.oh-my-zsh/themes/walt-sap.theme ]]; then
+if [[ -s ~/.oh-my-zsh/themes/walt-sap.zsh-theme ]]; then
   ZSH_THEME="walt-sap"
 else
   ZSH_THEME="xiong-chiamiov-plus"
@@ -187,3 +187,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export EDITOR=vim
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
