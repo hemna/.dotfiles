@@ -11,7 +11,7 @@ def get_host():
     if ((sys.version_info[0] == 3) and
         (sys.version_info[1] >= 5)):
         ret = subprocess.run(cmd, stdout=subprocess.PIPE)
-        host = ret.stdout.strip()
+        host = str(ret.stdout.strip())
         return host
     else:
         return subprocess.check_output(cmd).strip()
