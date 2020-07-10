@@ -43,6 +43,7 @@
 
 [pager]
 	color = true
+	branch = false
 
 [color "branch"]
 	current = yellow reverse
@@ -88,3 +89,5 @@
 	enabled = true
 [branch]
 	autosetuprebase = always
+[page]
+	branch = false
