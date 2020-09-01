@@ -6,6 +6,8 @@
     editor = vim -f
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
     excludesfile=/home/waboring/.gitignore
+    pager = delta
+
 [alias]
 	st = status -s
 	co = checkout
@@ -36,7 +38,8 @@
 
 [diff]
 	color = auto
-	rename = copy
+    rename = copy
+    colorMoved = default
 
 [status]
 	color = auto
@@ -91,3 +94,19 @@
 	autosetuprebase = always
 [page]
 	branch = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+    required = true
+
+[delta]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    syntax-theme = Monokai Extended
+    line-numbers = true
+    side-by-side = true
+    inspect-raw-lines = false
+
+[interactive]
+    diffFilter = delta --color-only
