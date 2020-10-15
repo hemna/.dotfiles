@@ -64,4 +64,5 @@ color_ssh () {
     echo -e "\033]6;1;bg;*;default\a"
 }
 
-alias ssh="color_ssh"
+#alias ssh="color_ssh"
+alias mp="multipass"

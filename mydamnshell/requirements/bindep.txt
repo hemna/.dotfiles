@@ -18,7 +18,8 @@ xclip [platform:dpkg platform:rpm]
 lnav [platform:dpkg platform:brew]
 lsb-release [platform:ubuntu platform:suse]
 fish [platform:ubuntu platform:brew platform:suse]
-python-autopep8 [platform:ubuntu]
+python-autopep8 [platform:ubuntu-bionic]
+python3-autopep8 [platform:ubuntu-focal]
 vim-autopep8 [platform:ubuntu]
 
 # For openSUSE
