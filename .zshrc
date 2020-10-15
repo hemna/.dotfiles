@@ -162,6 +162,7 @@ export PATH=$PATH:~/.bin:/sbin:~/.local/bin
 if [[ -s ~/.local.zsh ]]; then
     source ~/.local.zsh
 fi
+
 if [[ -s ~/.bin/tab_color.py ]]; then
     ~/.bin/tab_color.py
 fi
@@ -188,3 +189,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export EDITOR=vim
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# Created by `userpath` on 2020-08-07 17:27:44
+export PATH="$PATH:/Users/i530566/.local/bin"
