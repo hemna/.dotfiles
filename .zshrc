@@ -41,10 +41,11 @@ maybe=(
 #ZSH_THEME="xiong-chiamiov-plus"
 # pick a random theme from the bitches I like.
 #ZSH_THEME="xiong-chiamiov-plus"
-if [[ -s ~/.oh-my-zsh/themes/walt-sap.zsh-theme ]]; then
-  ZSH_THEME="walt-sap"
+if [[ -s ~/.oh-my-zsh/themes/walt-fino.zsh-theme ]]; then
+  ZSH_THEME="walt-fino"
 else
-  ZSH_THEME="xiong-chiamiov-plus"
+  #ZSH_THEME="xiong-chiamiov-plus"
+  ZSH_THEME="fino"
 fi
 
 #ZSH_THEME="random"
@@ -98,7 +99,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autopep8 battery cloudapp docker extract git git-extras python \
+plugins=(autopep8 battery docker extract git git-extras python \
     screen sudo \
     suse tig vagrant vi-mode)
 
