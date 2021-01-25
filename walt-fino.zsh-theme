@@ -26,12 +26,20 @@ function box_name {
 
 local ruby_env='$(ruby_prompt_info)'
 local git_info='$(git_prompt_info)'
+local git_changed='$(git_files_changed)'
 local virtualenv_info='$(virtualenv_prompt_info)'
 local prompt_char='$(prompt_char)'
 local ccloud_info=' $CCLOUD_PROMPT_ESCAPED_ZSH '
 
-PROMPT="╭─${FG[040]}%n ${FG[239]}at ${FG[033]}$(box_name) ${FG[239]}in %B${FG[226]}%~%b${git_info}${ruby_env}${virtualenv_info}${ccloud_info}
-╰─${ccloud_info}${prompt_char}%{$reset_color%} "
+ZSH_THEME_GIT_FILES_CHANGED_PREFIX="%{$fg[yellow]%}"
+ZSH_THEME_GIT_FILES_CHANGED_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_LINES_ADDED_PREFIX="%{$fg[green]%}"
+ZSH_THEME_GIT_LINES_ADDED_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_LINES_REMOVED_PREFIX="%{$fg[red]%}"
+ZSH_THEME_GIT_LINES_REMOVED_SUFFIX="%{$fg[blue]%}"
+
+PROMPT="╭─${FG[040]}%n ${FG[239]}at ${FG[033]}$(box_name) ${FG[239]}in %B${FG[226]}%~%b${git_info}${ruby_env}${virtualenv_info}
+╰─${ccloud_info} ${git_changed}${prompt_char}%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ${FG[239]}on%{$reset_color%} ${FG[255]}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"

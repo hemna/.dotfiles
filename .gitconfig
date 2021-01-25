@@ -109,4 +109,6 @@
     inspect-raw-lines = false
 
 [interactive]
-    diffFilter = delta --color-only
+    #diffFilter = delta --color-only
+[init]
+	templateDir = /Users/i530566/.git-template

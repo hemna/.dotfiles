@@ -42,6 +42,7 @@ maybe=(
 # pick a random theme from the bitches I like.
 #ZSH_THEME="xiong-chiamiov-plus"
 if [[ -s ~/.oh-my-zsh/themes/walt-fino.zsh-theme ]]; then
+  #ZSH_THEME="walt-sap"
   ZSH_THEME="walt-fino"
 else
   #ZSH_THEME="xiong-chiamiov-plus"
