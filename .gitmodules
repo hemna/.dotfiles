@@ -44,3 +44,6 @@
 [submodule ".vim/bundle/vim-fish"]
 	path = .vim/bundle/vim-fish
 	url = https://github.com/dag/vim-fish.git
+[submodule ".vim/bundle/vim-xonsh"]
+	path = .vim/bundle/vim-xonsh
+	url = https://github.com/meatballs/vim-xonsh
