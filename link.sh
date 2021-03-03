@@ -24,6 +24,8 @@ link .bin
 link .vimrc.local
 link .iterm2.zsh
 
+link .xonshrc
+
 
 # manually link the sap theme
 ln -s $SRC/walt-sap.zsh-theme ~/.oh-my-zsh/themes/walt-sap.zsh-theme

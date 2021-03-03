@@ -1,0 +1,24 @@
+$UPDATE_OS_ENVIRON = True
+$ENABLE_ASYNC_PROMPT = True
+$PROJECT_DIRS = "~/.projects"
+
+# XONSH WEBCONFIG START
+#source-zsh --login False "echo loading xonsh foreign shell"
+xontrib load abbrevs argcomplete autovox autoxsh avox avox_poetry
+xontrib load back2dir cmd_done commands coreutils direnv docker_tabcomplete
+xontrib load fzf-widgets gitinfo histcpy vox z
+# XONSH WEBCONFIG END
+#
+#
+
+$APRS_LOGIN="WB4BOR-6"
+$APRS_PASSWORD="24496"
+
+aliases['ll'] = 'ls -alh'
+
+
+if f".sap.xsh":
+    source f".sap.xsh"
+else:
+    $PROMPT = ("╭─{INTENSE_GREEN}{user}{RESET} at {BLUE}{hostname}{RESET} in {cwd} {INTENSE_GREEN}{gitstatus}{RESET}\n"
+               "╰─{INTENSE_RED}{prompt_end}{RESET} ")
