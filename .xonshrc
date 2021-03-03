@@ -16,8 +16,9 @@ $APRS_PASSWORD="24496"
 
 aliases['ll'] = 'ls -alh'
 
+sap_path = p"~/.sap.xsh"
 
-if f".sap.xsh":
+if os.path.exists(sap_path):
     source f".sap.xsh"
 else:
     $PROMPT = ("╭─{INTENSE_GREEN}{user}{RESET} at {BLUE}{hostname}{RESET} in {cwd} {INTENSE_GREEN}{gitstatus}{RESET}\n"
