@@ -1,4 +1,5 @@
 #!/bin/bash
-set -x
 
 sudo pip install xonsh
+
+xonsh ./setup_xonsh.xsh

@@ -1,6 +1,7 @@
 $UPDATE_OS_ENVIRON = True
 $ENABLE_ASYNC_PROMPT = True
 $PROJECT_DIRS = "~/.projects"
+$XSH_AVOX_VENV_NAME = ".venv"
 
 # XONSH WEBCONFIG START
 #source-zsh --login False "echo loading xonsh foreign shell"
