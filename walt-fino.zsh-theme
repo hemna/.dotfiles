@@ -38,7 +38,7 @@ ZSH_THEME_GIT_LINES_ADDED_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_LINES_REMOVED_PREFIX="%{$fg[red]%}"
 ZSH_THEME_GIT_LINES_REMOVED_SUFFIX="%{$fg[blue]%}"
 
-PROMPT="╭─${FG[040]}%n ${FG[239]}at ${FG[033]}$(box_name) ${FG[239]}in %B${FG[226]}%~%b${git_info}${ruby_env}${virtualenv_info}
+PROMPT="╭─${FG[040]}%n${FG[239]}(zsh) at ${FG[033]}$(box_name) ${FG[239]}in %B${FG[226]}%~%b${git_info}${ruby_env}${virtualenv_info}
 ╰─${ccloud_info} ${git_changed}${prompt_char}%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ${FG[239]}on%{$reset_color%} ${FG[255]}"

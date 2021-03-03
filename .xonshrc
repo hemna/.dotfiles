@@ -13,13 +13,14 @@ xontrib load fzf-widgets gitinfo histcpy vox z
 
 $APRS_LOGIN="WB4BOR-6"
 $APRS_PASSWORD="24496"
+$PROMPT_FIELDS['shell'] = "xonsh"
 
 aliases['ll'] = 'ls -alh'
 
-sap_path = p"~/.sap.xsh"
+sap_path = p"$HOME/.sap.xsh"
 
-if os.path.exists(sap_path):
-    source f".sap.xsh"
+if sap_path.exists():
+    source p"$HOME/.sap.xsh"
 else:
-    $PROMPT = ("╭─{INTENSE_GREEN}{user}{RESET} at {BLUE}{hostname}{RESET} in {cwd} {INTENSE_GREEN}{gitstatus}{RESET}\n"
+    $PROMPT = ("╭─{INTENSE_GREEN}{user}{RESET}{INTENSE_BLACK}({shell}){RESET} at {BLUE}{hostname}{RESET} in {cwd} {INTENSE_GREEN}{gitstatus}{RESET}\n"
                "╰─{INTENSE_RED}{prompt_end}{RESET} ")
