@@ -17,6 +17,8 @@ $APRS_PASSWORD="24496"
 $PROMPT_FIELDS['shell'] = "xonsh"
 
 aliases['ll'] = 'ls -alh'
+aliases['hpdev'] = 'ssh 192.168.1.3'
+aliases['dev'] = 'ssh 192.168.1.44'
 
 sap_path = p"$HOME/.sap.xsh"
 
