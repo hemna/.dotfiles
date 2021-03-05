@@ -12,6 +12,7 @@ pip-completion [platform:brew]
 build-essential [platform:dpkg]
 autoconf [platform:dpkg platform:rpm]
 automake [platform:dpkg platform:rpm]
+direnv [platform:dpkg platform:rpm]
 libtool [platform:dpkg platform:rpm]
 xclip [platform:dpkg platform:rpm]
 # lnav doesn't exist for centos8 so we disable it for rpm

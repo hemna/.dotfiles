@@ -2,3 +2,5 @@
 
 virtualfish
 glances
+thefuck
+xonsh
