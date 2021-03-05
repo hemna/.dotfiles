@@ -2,6 +2,8 @@ $UPDATE_OS_ENVIRON = True
 $ENABLE_ASYNC_PROMPT = True
 $PROJECT_DIRS = "~/.projects"
 $XSH_AVOX_VENV_NAME = ".venv"
+$VI_MODE = True
+#$UPDATE_PROMPT_ON_KEYPRESS = True
 
 # XONSH WEBCONFIG START
 #source-zsh --login False "echo loading xonsh foreign shell"
@@ -12,6 +14,11 @@ xontrib load fzf-widgets gitinfo histcpy vox z
 #
 #
 
+from prompt_toolkit.keys import Keys
+
+$fzf_history_binding = Keys.ControlR
+$fzf_ssh_binding = Keys.ControlS
+
 $APRS_LOGIN="WB4BOR-6"
 $APRS_PASSWORD="24496"
 $PROMPT_FIELDS['shell'] = "xonsh"
@@ -19,6 +26,9 @@ $PROMPT_FIELDS['shell'] = "xonsh"
 aliases['ll'] = 'ls -alh'
 aliases['hpdev'] = 'ssh 192.168.1.3'
 aliases['dev'] = 'ssh 192.168.1.44'
+aliases['fuck'] = 'thefuck'
+aliases['FUCK'] = 'thefuck'
+
 
 sap_path = p"$HOME/.sap.xsh"
 
