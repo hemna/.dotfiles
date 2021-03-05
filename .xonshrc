@@ -17,7 +17,7 @@ xontrib load fzf-widgets gitinfo histcpy sh vox z
 def _venv_name():
     var = __xonsh__.env.get("VIRTUAL_ENV", None)
     if var:
-        return "using <<{}>>".format(var)
+        return "using «{}»".format(var)
 
 from prompt_toolkit.keys import Keys
 $fzf_history_binding = Keys.ControlR
