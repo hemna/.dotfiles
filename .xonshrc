@@ -1,9 +1,9 @@
 $UPDATE_OS_ENVIRON = True
-$ENABLE_ASYNC_PROMPT = True
+# $ENABLE_ASYNC_PROMPT = True
 $PROJECT_DIRS = "~/devel"
 $XSH_AVOX_VENV_NAME = ".venv"
 $VI_MODE = True
-#$UPDATE_PROMPT_ON_KEYPRESS = True
+# $UPDATE_PROMPT_ON_KEYPRESS = True
 $XONTRIB_SH_SHELLS = ['bash', 'sh']
 
 # XONSH WEBCONFIG START
@@ -11,6 +11,7 @@ $XONTRIB_SH_SHELLS = ['bash', 'sh']
 xontrib load abbrevs argcomplete autovox autoxsh avox avox_poetry
 xontrib load back2dir cmd_done commands coreutils direnv docker_tabcomplete
 xontrib load fzf-widgets gitinfo histcpy sh vox z
+xontrib load prompt_starship
 # XONSH WEBCONFIG END
 #
 
@@ -27,6 +28,7 @@ $APRS_LOGIN="WB4BOR-6"
 $APRS_PASSWORD="24496"
 $PROMPT_FIELDS['shell'] = "xonsh"
 $PROMPT_FIELDS["venv_name"] = _venv_name
+$starship = True
 
 aliases['ll'] = 'ls -alh'
 aliases['hpdev'] = 'ssh 192.168.1.3'
@@ -39,6 +41,6 @@ sap_path = p"$HOME/.sap.xsh"
 
 if sap_path.exists():
     source p"$HOME/.sap.xsh"
-else:
+elif not $starship:
     $PROMPT = ("╭─{INTENSE_GREEN}{user}{RESET}{INTENSE_BLACK}({shell}){RESET} at {BLUE}{hostname}{RESET} in {cwd} {INTENSE_GREEN}{gitstatus}{RESET} {INTENSE_BLACK}{venv_name}{RESET}\n"
                "╰─{INTENSE_RED}{prompt_end}{RESET} ")
