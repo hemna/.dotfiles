@@ -29,4 +29,4 @@ link .xonshrc
 
 # manually link the sap theme
 ln -s $SRC/walt-sap.zsh-theme ~/.oh-my-zsh/themes/walt-sap.zsh-theme
-ln -s ~$SRC/starship.toml ~/.config
+ln -s $SRC/starship.toml ~/.config
