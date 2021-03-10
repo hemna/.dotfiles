@@ -27,14 +27,17 @@ git submodule update --init --recursive
 # use this to setup the basic shell and pull what is needed
 if [ ! -d ~/.oh-my-zsh ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-  git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 else
     cd ~/.oh-my-zsh
     git submodule update --init --recursive
 fi
 
+# install starship prompt 
+curl -fsSL https://starship.rs/install.sh -y | bash
+
 # try and setup fish
 cd ~/.dotfiles
+source setup_zsh.sh
 source setup_fish.sh
 source setup_xonsh.sh
 
@@ -56,4 +59,3 @@ curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
 # Install notes
 curl -L https://raw.githubusercontent.com/pimterry/notes/latest-release/install.sh | bash
-
