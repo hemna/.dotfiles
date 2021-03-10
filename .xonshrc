@@ -6,6 +6,8 @@ $VI_MODE = True
 # $UPDATE_PROMPT_ON_KEYPRESS = True
 $XONTRIB_SH_SHELLS = ['bash', 'sh']
 
+$STARSHIP_CONFIG = '~/.config/starship_xonsh.toml'
+
 # XONSH WEBCONFIG START
 #source-zsh --login False "echo loading xonsh foreign shell"
 xontrib load abbrevs argcomplete autovox autoxsh avox avox_poetry
