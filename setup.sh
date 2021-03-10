@@ -33,7 +33,13 @@ else
 fi
 
 # install starship prompt 
-curl -fsSL https://starship.rs/install.sh -y | bash
+tmp=`pwd`
+cd /tmp && \
+    wget https://starship.rs/install.sh && \
+    chmod +x install.sh && \
+    ./install.sh -y && \
+    rm install.sh && \
+    cd $tmp
 
 # try and setup fish
 cd ~/.dotfiles
