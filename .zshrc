@@ -100,9 +100,8 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autopep8 battery docker extract git git-extras python \
-    screen sudo \
-    suse tig vagrant vi-mode)
+plugins=(autopep8 battery docker extract git git-extras python screen sudo \
+    command-not-found autoswitch_virtualenv tig vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/dotfiles.sh
@@ -176,6 +175,8 @@ alias mkdir='nocorrect mkdir '
 
 # Disable sharing of history between shells
 unsetopt share_history
+setopt extendedhistory
+setopt histignoredups
 
 #for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -194,3 +195,5 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # Created by `userpath` on 2020-08-07 17:27:44
 export PATH="$PATH:/Users/i530566/.local/bin"
+
+eval $(thefuck --alias)
