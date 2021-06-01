@@ -100,8 +100,21 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autopep8 battery docker extract git git-extras python screen sudo \
-    command-not-found autoswitch_virtualenv tig vagrant vi-mode)
+plugins=(
+    autopep8
+    battery
+    command-not-found
+    docker
+    extract
+    git
+    git-extras
+    python
+    screen
+    sudo
+    tig
+    vagrant
+    vi-mode
+)
 
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/dotfiles.sh
