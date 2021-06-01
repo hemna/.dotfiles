@@ -120,9 +120,11 @@ plugins=(
     screen
     thefuck
     tig
+    transfer
     vagrant
     vi-mode
     virtualenv
+    z
 )
 
 source $ZSH/oh-my-zsh.sh
