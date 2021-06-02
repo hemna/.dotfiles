@@ -100,13 +100,39 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autopep8 battery docker extract git git-extras python screen sudo \
-    command-not-found tig vagrant vi-mode)
+plugins=(
+    autojump
+    autopep8
+    battery
+    bgnotify
+    catimg
+    command-not-found
+    common-aliases
+    colorize
+    colored-man-pages
+    docker
+    extract
+    fd
+    git
+    git-extras
+    jsontools
+    python
+    screen
+    thefuck
+    tig
+    transfer
+    vagrant
+    vi-mode
+    virtualenv
+    z
+)
 
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/dotfiles.sh
 
 # User configuration
+#
+ZSH_COLORIZE_STYLE="colorful"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history battery time)
