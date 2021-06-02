@@ -101,7 +101,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(autopep8 battery docker extract git git-extras python screen sudo \
-    command-not-found autoswitch_virtualenv tig vagrant vi-mode)
+    command-not-found tig vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/dotfiles.sh
@@ -181,6 +181,9 @@ setopt histignoredups
 #for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+# Load pyenv into the shell by adding
+# the following to ~/.zshrc:
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
