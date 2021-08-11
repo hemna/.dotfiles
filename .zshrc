@@ -125,7 +125,6 @@ plugins=(
     vi-mode
     virtualenv
     z
-    zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh
