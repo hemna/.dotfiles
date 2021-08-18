@@ -41,6 +41,8 @@ alias oscsd="osc service localrun download_files"
 
 cdl() { cd "$@" && ls -lhFA; }
 
+alias ls='lsd'
+
 if [ "$OS" = "mac" ]; then
   alias ll='ls -lhFA'
 else

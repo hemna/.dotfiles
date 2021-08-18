@@ -223,6 +223,6 @@ export EDITOR=vim
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # Created by `userpath` on 2020-08-07 17:27:44
-export PATH="$PATH:/Users/i530566/.local/bin"
+export PATH="$PATH:/Users/i530566/.local/bin:$HOME/.cargo/bin"
 
 eval $(thefuck --alias)
