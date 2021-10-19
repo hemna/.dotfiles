@@ -23,7 +23,7 @@ python-autopep8 [platform:ubuntu-bionic]
 python3-autopep8 [platform:ubuntu-focal]
 vim-autopep8 [platform:ubuntu]
 httpie [platform:ubuntu]
-bat [platform:ubuntu platform:brew]
+bat [platform:ubuntu-focal platform:brew]
 
 # For openSUSE
 python2-autopep8 [platform:suse]
