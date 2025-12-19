@@ -141,7 +141,11 @@ echo "Time per image = ${TIME_PER_FRAME}ms"
 #CMD="nice -n 11 ${MENCODER} -nosound -ovc xvid -xvidencopts bitrate=${BITRATE}:chroma_opt:vhq=4:bvhq=1:quant_type=mpeg \
 #-vf pp=de,scale=${WIDTH}:${HEIGHT} -o ${FILENAME} -mf type=jpeg:fps=${RATE} ${RUNLENOPT} mf://@files.txt"
 
-CMD="nice -n 11 ${MENCODER} -nosound -ovc x264 -vf scale=1920:1080 \
+#VCODEC_OPTS="vcodec=mpeg4:mbd=2:trell:v4mv:last_pred=3:predia=2:dia=2:vmax_b_frames=2:vb_strategy=1:precmp=2:cmp=2:subcmp=2:preme=2 -o mpv_flags=+cbp_rd+mv0,quantizer_noise_shaping=2"
+VCODEC_OPTS="vcodec=mpeg2video:vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=5000:keyint=15:vstrict=0"
+#VCODEC_OPTS="vcodec=mpeg4:mbd=2:trell:v4mv:last_pred=2:dia=-1:vmax_b_frames=2:vb_strategy=1:cmp=3:subcmp=3:precmp=0:vqcomp=0.6:turbo"
+
+CMD="nice -n 11 ${MENCODER} -nosound -ovc lavc -lavcopts ${VCODEC_OPTS} -vf scale=${WIDTH}:${HEIGHT} \
 -o ${FILENAME} -mf type=jpeg:fps=${RATE} ${RUNLENOPT} mf://@files.txt"
 
 

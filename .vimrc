@@ -12,8 +12,19 @@ set foldlevel=99
 set colorcolumn=79
 set number
 
-call pathogen#infect()
-call pathogen#helptags()
+
+" call pathogen#infect()
+" call pathogen#helptags()
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-sensible'
+
+call plug#end()
 
 filetype plugin indent on
 filetype on

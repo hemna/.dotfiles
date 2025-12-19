@@ -7,11 +7,14 @@ alias zshrc="vim ~/.zshrc && source ~/.zshrc"
 alias psg="ps aux | grep -v grep |grep -i -e VSZ -e"
 alias vssh="vagrant ssh"
 # run git pull origin master in every subdirectory from .
-alias gp="find . -name .git -type d -execdir git pull origin master -v ';'"
+alias gp="find . -name .git -type d -execdir git pull --all --tags -v ';'"
+alias p="python"
 
 alias mvn='mvn -P \!create-iso,\!create-installation'
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
 alias vssh="vagrant ssh"
+#alias cd=z
+alias cat="bat --theme gruvbox-dark"
 alias cd..="cd .."
 alias ..="cd .."
 alias ...="cd ../.."
@@ -22,6 +25,7 @@ alias archey="pyarchey"
 alias xdg="xdg-open"
 alias google="chromium-browser http://www.gogle.com"
 alias wx="curl wttr.in/Appomattox"
+alias f="fuck"
 
 # HOME
 alias homedev="ssh -Y waboring@home.hemna.com"
@@ -42,6 +46,7 @@ alias oscsd="osc service localrun download_files"
 cdl() { cd "$@" && ls -lhFA; }
 
 alias ls='lsd'
+alias lz='lazyssh'
 
 if [ "$OS" = "mac" ]; then
   alias ll='ls -lhFA'
@@ -59,10 +64,12 @@ HOME_NET="192.168.0.0/16"
 alias hometun="sshuttle -e 'ssh -Y' -r waboring@home.hemna.com ${HOME_NET}"
 alias hptun="sshuttle -r waboring@192.168.1.5 192.168.122.0/24 192.168.121.0/24 192.168.16.0/24"
 
-color_ssh () {
-    ssh $*
-    echo -e "\033]6;1;bg;*;default\a"
+color_ssh() {
+  ssh $*
+  echo -e "\033]6;1;bg;*;default\a"
 }
 
 #alias ssh="color_ssh"
 alias mp="multipass"
+alias vim=nvim
+alias vi=nvim

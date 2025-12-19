@@ -187,3 +187,5 @@ fi
 
 export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+. "$HOME/.cargo/env"

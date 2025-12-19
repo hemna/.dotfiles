@@ -1,11 +1,26 @@
-[user]
-	name = Hemna
-    email = waboring@hemna.com
+[gpg]
+	format = ssh
+  program = ssh
+
+[includeIf "gitdir:~/devel/SAP/"]
+  path = ~/.gitconfig-SAP
+
+[includeIf "gitdir:~/devel/openstack/"]
+  path = ~/.gitconfig-SAP
+
+[includeIf "gitdir:~/devel/mine/"]
+  path = ~/.gitconfig-MINE
+
+[includeIf "gitdir:~/.dotfiles"]
+    path = ~/.gitconfig-MINE
+
+[includeIf "gitdir:/Users/i530566/.dotfiles"]
+  path = ~/.gitconfig-MINE
 
 [core]
     editor = vim -f
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    excludesfile=/home/waboring/.gitignore
+	excludesfile = /Users/I530566/.gitignore_global
     pager = delta
 
 [alias]
@@ -34,12 +49,16 @@
 
 [color]
 	ui = true
-	wtf = true
+  wtf = true
+
+[merge]
+  conflictstyle = zdiff3
 
 [diff]
 	color = auto
     rename = copy
     colorMoved = default
+    #external = difft
 
 [status]
 	color = auto
@@ -85,7 +104,9 @@
 
 [github]
 	user = hemna
-	email = waboring@hemna.com
+  email = waboring@hemna.com
+  signingkey=~/.ssh/id_rsa.pub
+
 [credential]
 	helper = osxkeychain
 [rerere]
@@ -112,3 +133,17 @@
     #diffFilter = delta --color-only
 [init]
 	templateDir = /Users/i530566/.git-template
+[user]
+	signingkey = /Users/I530566/.ssh/id_rsa.pub
+	email = waboring@hemna.com
+	name = Walter Boring
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/I530566/.stCommitMsg
+[coderabbit]
+	machineId = cli/5d461ba163b34fc4b17aa4a0eb218483

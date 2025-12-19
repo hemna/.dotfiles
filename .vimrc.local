@@ -1,3 +1,8 @@
 set colorcolumn=79
 " Set copy works from the mouse while in vim
 set mouse=v
+
+let g:codestats_api_key = 'SFMyNTY.YUdWdGJtRT0jI01UUTVNakU9.cTSSXa4waXH9Qlltvq4oEKQoWRxqx6nK-AFuXo5C9xM'
+let g:airline_section_x = airline#section#create_right(['tagbar', 'filetype', '%{CodeStatsXp()}'])
+
+Plugin 'github/copilot.vim'
