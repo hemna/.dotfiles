@@ -24,13 +24,19 @@ git submodule update --init --recursive
 
 #cd $oldpwd
 
-# use this to setup the basic shell and pull what is needed
-if [ ! -d ~/.oh-my-zsh ]; then
-  git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-else
-    cd ~/.oh-my-zsh
-    git submodule update --init --recursive
+# install zinit
+if [ ! -d ~/.local/share/zinit ]; then
+  echo "Installing zinit"
+  bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 fi
+
+# use this to setup the basic shell and pull what is needed
+#if [ ! -d ~/.oh-my-zsh ]; then
+#  git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+#else
+#    cd ~/.oh-my-zsh
+#    git submodule update --init --recursive
+#fi
 
 # install starship prompt 
 tmp=`pwd`
